@@ -14,7 +14,7 @@ open class VoiceAction {
   private var speechReconizer: SFSpeechRecognizer?
   private let request = SFSpeechAudioBufferRecognitionRequest()
   private var task: SFSpeechRecognitionTask!
-  private var actionWords: [String] = []
+  private var actionWord: String = ""
   private var timer = TimerControl()
   private var isCooldown = false
 
@@ -26,8 +26,12 @@ open class VoiceAction {
     timer.delegate = self
   }
 
-  open func set(TheActionWords actionWords: [String]) {
-    self.actionWords = actionWords
+  open func set(TheActionWord actionWord: String) {
+    self.actionWord = actionWord
+  }
+  
+  open func set(locale: Locale) {
+    speechReconizer = SFSpeechRecognizer(locale: locale)
   }
 
   open func start() {
@@ -88,9 +92,9 @@ open class VoiceAction {
   }
 
   private func detectAction(WithActionText actionText: String) {
-    for action in actionWords where action.lowercased() == actionText  && !isCooldown {
+    if actionWord == actionText  && !isCooldown {
       self.timer.startTimer(withTimerSeconds: ValuesConstants.cooldown)
-      delegateActionVoice?.commandDetected(withCommand: action)
+      delegateActionVoice?.commandDetected(withCommand: actionText)
       isCooldown = true
     }
   }

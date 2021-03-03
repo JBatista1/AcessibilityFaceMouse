@@ -30,7 +30,6 @@
 		9A0A306D25F037AA0013DA6B /* TimerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A303F25F037A90013DA6B /* TimerControl.swift */; };
 		9A0A306E25F037AA0013DA6B /* ManagePointSensibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A304025F037A90013DA6B /* ManagePointSensibility.swift */; };
 		9A0A306F25F037AA0013DA6B /* MoveCursorFaceAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A304125F037A90013DA6B /* MoveCursorFaceAnchor.swift */; };
-		9A0A307025F037AA0013DA6B /* Recognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A304225F037A90013DA6B /* Recognizer.swift */; };
 		9A0A307125F037AA0013DA6B /* VoiceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A304325F037AA0013DA6B /* VoiceAction.swift */; };
 		9A0A307225F037AA0013DA6B /* ActionInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A304425F037AA0013DA6B /* ActionInView.swift */; };
 		9A0A307325F037AA0013DA6B /* ManagesSpecialCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A304525F037AA0013DA6B /* ManagesSpecialCases.swift */; };
@@ -45,6 +44,8 @@
 		9A0A307C25F037AA0013DA6B /* TimerActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A304F25F037AA0013DA6B /* TimerActionProtocol.swift */; };
 		9A0A307D25F037AA0013DA6B /* ActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A305025F037AA0013DA6B /* ActionProtocol.swift */; };
 		9A0A307E25F037AA0013DA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0A305225F037AA0013DA6B /* Assets.xcassets */; };
+		9A35052125F054E700CDCAB2 /* ActionVoiceCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052025F054E700CDCAB2 /* ActionVoiceCommands.swift */; };
+		9A35052325F055DC00CDCAB2 /* VoiceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052225F055DC00CDCAB2 /* VoiceCommand.swift */; };
 		9A8C67D925F041270018F215 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C67D825F041270018F215 /* Assets.swift */; };
 		9AD0861125F03A6200120C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0861025F03A6200120C80 /* AppDelegate.swift */; };
 		9AD0861325F03A6200120C80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0861225F03A6200120C80 /* SceneDelegate.swift */; };
@@ -127,7 +128,6 @@
 		9A0A303F25F037A90013DA6B /* TimerControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerControl.swift; sourceTree = "<group>"; };
 		9A0A304025F037A90013DA6B /* ManagePointSensibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePointSensibility.swift; sourceTree = "<group>"; };
 		9A0A304125F037A90013DA6B /* MoveCursorFaceAnchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveCursorFaceAnchor.swift; sourceTree = "<group>"; };
-		9A0A304225F037A90013DA6B /* Recognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recognizer.swift; sourceTree = "<group>"; };
 		9A0A304325F037AA0013DA6B /* VoiceAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceAction.swift; sourceTree = "<group>"; };
 		9A0A304425F037AA0013DA6B /* ActionInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionInView.swift; sourceTree = "<group>"; };
 		9A0A304525F037AA0013DA6B /* ManagesSpecialCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagesSpecialCases.swift; sourceTree = "<group>"; };
@@ -142,6 +142,8 @@
 		9A0A304F25F037AA0013DA6B /* TimerActionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerActionProtocol.swift; sourceTree = "<group>"; };
 		9A0A305025F037AA0013DA6B /* ActionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionProtocol.swift; sourceTree = "<group>"; };
 		9A0A305225F037AA0013DA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A35052025F054E700CDCAB2 /* ActionVoiceCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionVoiceCommands.swift; sourceTree = "<group>"; };
+		9A35052225F055DC00CDCAB2 /* VoiceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCommand.swift; sourceTree = "<group>"; };
 		9A8C67D825F041270018F215 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9AD0860E25F03A6200120C80 /* Exemples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD0861025F03A6200120C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				9A0A308025F037DA0013DA6B /* SupportFiles */,
-				9A0A301F25F037A90013DA6B /* Exemple */,
 				9A0A301A25F037A90013DA6B /* FaceMouse */,
 				9A0A305125F037AA0013DA6B /* Resources */,
 				9A0A300325F0370C0013DA6B /* AcessibilityFaceMouse.h */,
@@ -244,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9A0A301B25F037A90013DA6B /* Core */,
-				9A0A302B25F037A90013DA6B /* Regras de negocio */,
+				9A0A302B25F037A90013DA6B /* BusinessRules */,
 			);
 			path = FaceMouse;
 			sourceTree = "<group>";
@@ -257,13 +258,6 @@
 				9A0A301E25F037A90013DA6B /* AccessibilityFaceAnchorViewController.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		9A0A301F25F037A90013DA6B /* Exemple */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Exemple;
 			sourceTree = "<group>";
 		};
 		9A0A302325F037A90013DA6B /* Controllers */ = {
@@ -279,7 +273,7 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		9A0A302B25F037A90013DA6B /* Regras de negocio */ = {
+		9A0A302B25F037A90013DA6B /* BusinessRules */ = {
 			isa = PBXGroup;
 			children = (
 				9A0A302C25F037A90013DA6B /* Extension */,
@@ -289,7 +283,7 @@
 				9A0A303E25F037A90013DA6B /* Auxiliares */,
 				9A0A304725F037AA0013DA6B /* Protocols */,
 			);
-			path = "Regras de negocio";
+			path = BusinessRules;
 			sourceTree = "<group>";
 		};
 		9A0A302C25F037A90013DA6B /* Extension */ = {
@@ -312,6 +306,7 @@
 				9A0A303525F037A90013DA6B /* DirectiorFaceMoviment.swift */,
 				9A0A303625F037A90013DA6B /* MovimentDirection.swift */,
 				9A0A303725F037A90013DA6B /* Direction.swift */,
+				9A35052225F055DC00CDCAB2 /* VoiceCommand.swift */,
 			);
 			path = Enuns;
 			sourceTree = "<group>";
@@ -330,6 +325,7 @@
 			children = (
 				9A0A303C25F037A90013DA6B /* ViewAction.swift */,
 				9A0A303D25F037A90013DA6B /* FaceSensitivity.swift */,
+				9A35052025F054E700CDCAB2 /* ActionVoiceCommands.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,14 +333,10 @@
 		9A0A303E25F037A90013DA6B /* Auxiliares */ = {
 			isa = PBXGroup;
 			children = (
-				9A0A303F25F037A90013DA6B /* TimerControl.swift */,
-				9A0A304025F037A90013DA6B /* ManagePointSensibility.swift */,
-				9A0A304125F037A90013DA6B /* MoveCursorFaceAnchor.swift */,
-				9A0A304225F037A90013DA6B /* Recognizer.swift */,
-				9A0A304325F037AA0013DA6B /* VoiceAction.swift */,
-				9A0A304425F037AA0013DA6B /* ActionInView.swift */,
-				9A0A304525F037AA0013DA6B /* ManagesSpecialCases.swift */,
-				9A0A304625F037AA0013DA6B /* Position.swift */,
+				9A97EC7825F04B0200442CB3 /* Util */,
+				9A97EC7725F04AF500442CB3 /* Position */,
+				9A97EC7625F04AE900442CB3 /* Manages */,
+				9A97EC7525F04AD800442CB3 /* Actions Detect */,
 			);
 			path = Auxiliares;
 			sourceTree = "<group>";
@@ -352,6 +344,8 @@
 		9A0A304725F037AA0013DA6B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9A8C67DB25F044FD0018F215 /* Protocol */,
+				9A8C67DA25F044F10018F215 /* Delegates */,
 				9A0A304825F037AA0013DA6B /* VoiceActionResponseProtocol.swift */,
 				9A0A304925F037AA0013DA6B /* ManagerPointSesibilittyProtocol.swift */,
 				9A0A304A25F037AA0013DA6B /* CellViewSelectedProtocol.swift */,
@@ -386,6 +380,55 @@
 				9A8C67D825F041270018F215 /* Assets.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9A8C67DA25F044F10018F215 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		9A8C67DB25F044FD0018F215 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9A97EC7525F04AD800442CB3 /* Actions Detect */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A304425F037AA0013DA6B /* ActionInView.swift */,
+				9A0A304325F037AA0013DA6B /* VoiceAction.swift */,
+			);
+			path = "Actions Detect";
+			sourceTree = "<group>";
+		};
+		9A97EC7625F04AE900442CB3 /* Manages */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A304525F037AA0013DA6B /* ManagesSpecialCases.swift */,
+				9A0A304025F037A90013DA6B /* ManagePointSensibility.swift */,
+			);
+			path = Manages;
+			sourceTree = "<group>";
+		};
+		9A97EC7725F04AF500442CB3 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A304125F037A90013DA6B /* MoveCursorFaceAnchor.swift */,
+				9A0A304625F037AA0013DA6B /* Position.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		9A97EC7825F04B0200442CB3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A303F25F037A90013DA6B /* TimerControl.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		9AD0860F25F03A6200120C80 /* Exemples */ = {
@@ -624,6 +667,7 @@
 				9A0A306E25F037AA0013DA6B /* ManagePointSensibility.swift in Sources */,
 				9A0A306925F037AA0013DA6B /* Constants.swift in Sources */,
 				9A0A306C25F037AA0013DA6B /* FaceSensitivity.swift in Sources */,
+				9A35052125F054E700CDCAB2 /* ActionVoiceCommands.swift in Sources */,
 				9A0A306725F037AA0013DA6B /* MovimentDirection.swift in Sources */,
 				9A0A306B25F037AA0013DA6B /* ViewAction.swift in Sources */,
 				9A0A307A25F037AA0013DA6B /* TabBarSelectedProtocol.swift in Sources */,
@@ -631,7 +675,7 @@
 				9A0A307825F037AA0013DA6B /* GetSensitivityProtocol.swift in Sources */,
 				9A0A305725F037AA0013DA6B /* AccessibilityFaceAnchorViewController.swift in Sources */,
 				9A0A306225F037AA0013DA6B /* UIVIew+Position.swift in Sources */,
-				9A0A307025F037AA0013DA6B /* Recognizer.swift in Sources */,
+				9A35052325F055DC00CDCAB2 /* VoiceCommand.swift in Sources */,
 				9A0A306025F037AA0013DA6B /* CGFloatExtension.swift in Sources */,
 				9A0A306D25F037AA0013DA6B /* TimerControl.swift in Sources */,
 			);

@@ -18,6 +18,7 @@ class SuccessViewController: AccessibilityFaceAnchorViewController {
     delegateNavigationBar = self
     delegateTabBar = self
     delegateCellView = self
+    action.setTypeStartAction(withType: .tongue)
   }
 
   override func viewDidLayoutSubviews() {

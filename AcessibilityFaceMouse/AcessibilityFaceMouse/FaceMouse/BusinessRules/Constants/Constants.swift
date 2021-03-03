@@ -34,7 +34,11 @@ enum ValuesConstants {
   static let tolerance: CGFloat = 0.01
   static let numberAcceptedValues: Int = 150
   static let valueForStart: Int = 50
-  static let locale = Locale(identifier: "pt-BR")
+  static let locale = Locale(identifier: Locale.preferredLanguages[0])
+  static let actionTap = "toque"
+  static let actionBack = "voltar"
+  static let actionScrollNext = "próximo"
+  static let actionScrollBack = "anterior"
 }
 
 internal enum AccessibilityUIType: String {

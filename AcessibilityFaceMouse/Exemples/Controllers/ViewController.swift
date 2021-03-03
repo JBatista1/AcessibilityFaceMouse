@@ -30,7 +30,6 @@ class ViewController: AccessibilityFaceAnchorViewController {
     super.viewDidLoad()
     action.set(viewsAction: createViewAction())
     delegateTabBar = self
-    voiceAction.set(TheActionWords: ["toque", "próximo", "anterior"]) 
     voiceAction.start()
     voiceAction.delegate = self
   }

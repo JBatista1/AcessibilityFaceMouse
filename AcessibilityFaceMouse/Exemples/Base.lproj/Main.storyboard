@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8x-ce-rVw">
-                                <rect key="frame" x="20" y="108" width="50" height="50"/>
+                                <rect key="frame" x="20" y="108" width="70" height="70"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sVl-Au-zLO"/>
-                                    <constraint firstAttribute="width" constant="50" id="ztS-00-qV0"/>
+                                    <constraint firstAttribute="height" constant="70" id="sVl-Au-zLO"/>
+                                    <constraint firstAttribute="width" constant="70" id="ztS-00-qV0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="1">
@@ -29,11 +29,11 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-E5-5F1">
-                                <rect key="frame" x="182" y="108" width="50" height="50"/>
+                                <rect key="frame" x="172" y="108" width="70" height="70"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="epw-5i-8U0"/>
-                                    <constraint firstAttribute="width" constant="50" id="sX2-3I-a5n"/>
+                                    <constraint firstAttribute="height" constant="70" id="epw-5i-8U0"/>
+                                    <constraint firstAttribute="width" constant="70" id="sX2-3I-a5n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="2">
@@ -41,11 +41,11 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-NH-ZqA">
-                                <rect key="frame" x="344" y="108" width="50" height="50"/>
+                                <rect key="frame" x="324" y="108" width="70" height="70"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BFd-4w-0bH"/>
-                                    <constraint firstAttribute="width" constant="50" id="xV0-Wv-gkp"/>
+                                    <constraint firstAttribute="height" constant="70" id="BFd-4w-0bH"/>
+                                    <constraint firstAttribute="width" constant="70" id="xV0-Wv-gkp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="3">

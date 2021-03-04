@@ -22,9 +22,9 @@ enum Cursor {
 }
 
 enum ValuesConstants {
-  static let closeEye: CGFloat = 0.3
+  static let closeEye: CGFloat = 0.2
   static let openEye: CGFloat = 0.6
-  static let tongue: CGFloat = 0.2
+  static let tongue: CGFloat = 0.1
   static let indexPathError: IndexPath = IndexPath(row: -1, section: -1)
   static let framesPerSecond: Int = 25
   static let tabBarIndexError: Int = -1
@@ -35,7 +35,7 @@ enum ValuesConstants {
   static let numberAcceptedValues: Int = 150
   static let valueForStart: Int = 50
   static let locale = Locale(identifier: Locale.preferredLanguages[0])
-  static let actionTap = "toque"
+  static let actionTap = "ok"
   static let actionBack = "voltar"
   static let actionScrollNext = "próximo"
   static let actionScrollBack = "anterior"

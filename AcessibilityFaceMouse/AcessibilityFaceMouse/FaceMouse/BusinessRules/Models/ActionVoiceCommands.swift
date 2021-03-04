@@ -28,7 +28,7 @@ public struct ActionVoiceCommands {
   }
   
   internal func getCommandsString() -> [String] {
-    return [action, backNavigation, scrollNext, scrollBack]
+    return [action.lowercased(), backNavigation.lowercased(), scrollNext.lowercased(), scrollBack.lowercased()]
   }
 
   internal func getCommandoEnum(withText text: String ) -> VoiceCommand {

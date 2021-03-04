@@ -14,28 +14,35 @@ open class VoiceAction {
   private var speechReconizer: SFSpeechRecognizer?
   private let request = SFSpeechAudioBufferRecognitionRequest()
   private var task: SFSpeechRecognitionTask!
-  private var actionWord: String = ""
+  private var actionVoiceCommands: ActionVoiceCommands = ActionVoiceCommands.getDefault()
   private var timer = TimerControl()
-  private var isCooldown = false
-
+  private var isCooldown = 0
+  private var lastString = ""
   open weak var delegateActionVoice: VoiceActionActiveProtocol?
   open weak var delegate: VoiceActionResponseProtocol?
 
   init(locale: Locale = ValuesConstants.locale) {
     speechReconizer = SFSpeechRecognizer(locale: locale)
     timer.delegate = self
+    request.requiresOnDeviceRecognition = true
   }
 
-  open func set(TheActionWord actionWord: String) {
-    self.actionWord = actionWord
+  open func set(TheActionWord actionVoiceCommands: ActionVoiceCommands) {
+    self.actionVoiceCommands = actionVoiceCommands
   }
   
   open func set(locale: Locale) {
     speechReconizer = SFSpeechRecognizer(locale: locale)
   }
-
+  
   open func start() {
-    startRecording()
+    if !audioEngine.isRunning {
+     startAudioEngine()
+    }
+  }
+
+  open func stop() {
+    audioEngine.pause()
   }
 
   open func checkPermissions() {
@@ -57,14 +64,16 @@ open class VoiceAction {
     }
   }
 
-  private func startRecording() {
+  open func initialRecording() {
     let node = audioEngine.inputNode
     let recordingFormat = node.outputFormat(forBus: 0)
 
     node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
       self.request.append(buffer)
     }
-
+    startAudioEngine()
+  }
+  private func startAudioEngine() {
     audioEngine.prepare()
     do {
       try audioEngine.start()
@@ -85,23 +94,24 @@ open class VoiceAction {
 
       let message = response.bestTranscription.formattedString.split(separator: " ")
       if let actioText = message.last {
-        print(String(actioText).lowercased())
+        print(actioText)
         self.detectAction(WithActionText: String(actioText).lowercased())
       }
     })
   }
 
   private func detectAction(WithActionText actionText: String) {
-    if actionWord == actionText  && !isCooldown {
+    let actionWords = actionVoiceCommands.getCommandsString()
+    for action in actionWords where action.lowercased() == actionText && isCooldown == 0 {
+      delegateActionVoice?.commandDetected(withCommand: actionVoiceCommands.getCommandoEnum(withText: action))
       self.timer.startTimer(withTimerSeconds: ValuesConstants.cooldown)
-      delegateActionVoice?.commandDetected(withCommand: actionText)
-      isCooldown = true
+      isCooldown = 1
     }
   }
 }
 
 extension VoiceAction: TimerActionResponseProtocol {
   func finishTimer() {
-    isCooldown = false
+    isCooldown = 0
   }
 }

@@ -12,14 +12,16 @@ open class AcessibilityViewController: UIViewController {
 
   // MARK: Delegates
 
-  public weak var delegateTabBar: TabBarSelectedProtocol?
-  public weak var delegateNavigationBar: NavigationBackButtonProtocol?
-  public weak var delegateCellView: CellViewSelectedProtocol?
+  public var delegateTabBar: TabBarSelectedProtocol?
+  public var delegateNavigationBar: NavigationBackButtonProtocol?
+  public var delegateCellView: CellViewSelectedProtocol?
+  public var delegateScroll: ScrollActionDelegate?
 
   // MARK: - Public Property
 
   open var cursor = UIImageView(frame: CGRect(x: Cursor.x, y: Cursor.y, width: Cursor.width, height: Cursor.heigh))
   open var action: ActionProtocol!
+  open var acessibilityTableView: UITableView?
 
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,6 +30,9 @@ open class AcessibilityViewController: UIViewController {
     insertCursor()
   }
 
+  public func set(withTableView table: UITableView) {
+    acessibilityTableView = table
+  }
   // MARK: - Private Class Methods
 
   private func setupCursor() {
@@ -62,22 +67,30 @@ open class AcessibilityViewController: UIViewController {
   }
 }
 
-// MARK: - Selector for delegates
+// MARK: - Selector and Selegates
 
 extension AcessibilityViewController {
 
-  @objc private func selectedTabBar(withIndex index: String) {
+  @objc internal func selectedTabBar(withIndex index: String) {
     guard let selectedIndex = Int(index) else { return }
     delegateTabBar?.tabBar(isSelectedIndex: selectedIndex)
   }
 
-  @objc private func selectedBackNavigationBar() {
+  @objc internal func selectedBackNavigationBar() {
     delegateNavigationBar?.actionNavigationBack()
   }
 
   @objc open func selectedCell(_ sender: Any? = nil) {
     guard let index = sender as? IndexPath else { return }
     delegateCellView?.cellSelected(withIndex: index)
+  }
+  
+  internal func scrollNextCell() {
+    delegateScroll?.scrollNext()
+  }
+
+  internal func scrollBackCell() {
+    delegateScroll?.scrollBack()
   }
 }
 

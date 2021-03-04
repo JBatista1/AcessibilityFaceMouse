@@ -20,12 +20,17 @@ class CollectionTestViewController: AccessibilityFaceAnchorViewController {
     collectionViewConfiguration()
     delegateCellView = self
     delegateTabBar = self
-     voiceAction.start()
+    voiceAction.initialRecording()
   }
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     action.set(viewsAction: createViewAction())
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    voiceAction.start()
   }
 
   func collectionViewConfiguration() {

@@ -6,7 +6,7 @@
 //  Copyright © 2021 Joao Batista. All rights reserved.
 //
 
-internal enum VoiceCommand {
+public enum VoiceCommand {
   case action
   case backNavigation
   case scrollNext

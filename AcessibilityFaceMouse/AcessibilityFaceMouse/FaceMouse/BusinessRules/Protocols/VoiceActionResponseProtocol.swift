@@ -15,5 +15,5 @@ public protocol VoiceActionResponseProtocol: AnyObject {
 }
 
 public protocol VoiceActionActiveProtocol: AnyObject {
-  func commandDetected(withCommand command: String)
+  func commandDetected(withCommand command: VoiceCommand)
 }

@@ -37,13 +37,19 @@ open class AccessibilityFaceAnchorViewController: AcessibilityViewController {
     voiceAction.checkPermissions()
   }
 
+  open override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+  }
+
   open override func viewDidDisappear(_ animated: Bool) {
     sceneView.session.pause()
+    voiceAction.stop()
   }
 
   public func set(faceSensitivity: FaceSensitivity) {
     moveCursor.set(faceSensitivity: faceSensitivity)
   }
+
   // MARK: - Private Class Methods
 
   private func resetTracking() {
@@ -80,7 +86,7 @@ open class AccessibilityFaceAnchorViewController: AcessibilityViewController {
   }
 
   private func actionVoice(withPoint point: CGPoint) {
-     action.getViewForAction(withPoint: point)
+    action.getViewForAction(withPoint: point)
   }
 }
 
@@ -101,11 +107,21 @@ extension AccessibilityFaceAnchorViewController: ARSCNViewDelegate, ARSessionDel
     }
     self.animateCursor(toNextPoint: actualPoint)
   }
-
 }
 
 extension AccessibilityFaceAnchorViewController: VoiceActionActiveProtocol {
-  public func commandDetected(withCommand command: String) {
-    actionVoice(withPoint: actualPoint)
+  public func commandDetected(withCommand command: VoiceCommand) {
+    switch command {
+    case .action:
+      actionVoice(withPoint: actualPoint)
+    case .backNavigation:
+      selectedBackNavigationBar()
+    case .scrollNext:
+      scrollNextCell()
+    case .scrollBack:
+      scrollBackCell()
+    case .unknown:
+      break
+    }
   }
 }

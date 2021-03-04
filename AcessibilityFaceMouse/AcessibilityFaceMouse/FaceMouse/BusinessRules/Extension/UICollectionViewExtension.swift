@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UICollectionView {
+public extension UICollectionView {
 
   func getCell() -> [UICollectionViewCell] {
     var cells = [UICollectionViewCell]()

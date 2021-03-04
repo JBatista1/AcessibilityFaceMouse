@@ -32,14 +32,14 @@ public struct ActionVoiceCommands {
   }
 
   internal func getCommandoEnum(withText text: String ) -> VoiceCommand {
-    switch text {
-    case action:
+    switch text.lowercased() {
+    case action.lowercased():
       return .action
-    case backNavigation:
+    case backNavigation.lowercased():
       return .backNavigation
-    case scrollNext:
+    case scrollNext.lowercased():
       return .scrollNext
-    case scrollBack:
+    case scrollBack.lowercased():
       return .scrollBack
     default:
       return .unknown

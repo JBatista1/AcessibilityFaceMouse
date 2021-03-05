@@ -35,6 +35,9 @@ open class AccessibilityFaceAnchorViewController: AcessibilityViewController {
     UIApplication.shared.isIdleTimerDisabled = true
     resetTracking()
     voiceAction.checkPermissions()
+    if action.getType() == .voice {
+      voiceAction.start()
+    }
   }
 
   open override func viewDidLayoutSubviews() {
@@ -43,7 +46,9 @@ open class AccessibilityFaceAnchorViewController: AcessibilityViewController {
 
   open override func viewDidDisappear(_ animated: Bool) {
     sceneView.session.pause()
-    voiceAction.stop()
+    if action.getType() == .voice {
+      voiceAction.stop()
+    }
   }
 
   public func set(faceSensitivity: FaceSensitivity) {

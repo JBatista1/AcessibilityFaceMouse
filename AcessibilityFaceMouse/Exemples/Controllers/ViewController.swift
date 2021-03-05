@@ -28,7 +28,6 @@ class ViewController: AccessibilityFaceAnchorViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    action.set(viewsAction: createViewAction())
     delegateTabBar = self
     voiceAction.initialRecording()
     voiceAction.delegate = self
@@ -36,17 +35,15 @@ class ViewController: AccessibilityFaceAnchorViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: animated)
-  }
-  
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    voiceAction.start()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     navigationController?.setNavigationBarHidden(false, animated: animated)
+  }
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    action.set(viewsAction: createViewAction())
   }
 
   func createViewAction() -> [ViewAction] {

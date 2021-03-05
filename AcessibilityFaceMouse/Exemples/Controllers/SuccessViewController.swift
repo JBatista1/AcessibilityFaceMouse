@@ -23,12 +23,7 @@ class SuccessViewController: AccessibilityFaceAnchorViewController {
     super.viewDidLayoutSubviews()
     action.set(viewsAction: createViewAction())
   }
-
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    voiceAction.start()
-  }
-
+  
   func setDelegates() {
     delegateNavigationBar = self
     delegateTabBar = self

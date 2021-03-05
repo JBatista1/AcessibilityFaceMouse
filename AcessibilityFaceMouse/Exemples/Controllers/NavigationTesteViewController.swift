@@ -25,11 +25,6 @@ class NavigationTesteViewController: AccessibilityFaceAnchorViewController {
     action.set(viewsAction: createViewAction())
   }
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    voiceAction.start()
-  }
-
   private func addActionUIImageView() {
     let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
     bookImageView.addGestureRecognizer(tap)

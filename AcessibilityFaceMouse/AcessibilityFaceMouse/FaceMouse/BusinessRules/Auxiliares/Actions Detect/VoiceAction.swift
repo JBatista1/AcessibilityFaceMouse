@@ -15,15 +15,13 @@ open class VoiceAction {
   private let request = SFSpeechAudioBufferRecognitionRequest()
   private var task: SFSpeechRecognitionTask!
   private var actionVoiceCommands: ActionVoiceCommands = ActionVoiceCommands.getDefault()
-  private var timer = TimerControl()
-  private var isCooldown : Bool = false
+  private var numberCalled: Int = 0
 
   open weak var delegateActionVoice: VoiceActionActiveProtocol?
   open weak var delegate: VoiceActionResponseProtocol?
 
   init(locale: Locale = ValuesConstants.locale) {
     speechReconizer = SFSpeechRecognizer(locale: locale)
-    timer.delegate = self
     request.requiresOnDeviceRecognition = true
   }
 
@@ -85,7 +83,6 @@ open class VoiceAction {
   }
 
   private func recognitionTask() {
-
     task = speechReconizer?.recognitionTask(with: request, resultHandler: { (response, error) in
       guard let response = response else { return }
 
@@ -97,20 +94,12 @@ open class VoiceAction {
       let message = response.bestTranscription.formattedString.split(separator: " ")
       if let actioText = message.last {
         let actionWords = self.actionVoiceCommands.getCommandsString()
-        print(actioText)
-        for action in actionWords where action.lowercased() == String(actioText).lowercased() && !self.isCooldown {
+        for action in actionWords where action.lowercased() == String(actioText).lowercased() && self.numberCalled == 0 {
+           print(actioText)
           self.delegateActionVoice?.commandDetected(withCommand: self.actionVoiceCommands.getCommandoEnum(withText: action))
-          self.timer.startTimer(withTimerSeconds: ValuesConstants.cooldown)
-          self.isCooldown = true
         }
+         self.numberCalled = self.numberCalled == 1 ? 0 : self.numberCalled + 1
       }
     })
-  }
-}
-
-extension VoiceAction: TimerActionResponseProtocol {
-  func finishTimer() {
-    print("called")
-    isCooldown = false
   }
 }

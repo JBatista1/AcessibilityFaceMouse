@@ -14,6 +14,7 @@ extension UIView {
     if let baseWindow = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first {
       return returnAbsoluteValue(basedInWindows: baseWindow)
     }
+    
     return CGRect(x: 0, y: 0, width: 0, height: 0)
   }
 

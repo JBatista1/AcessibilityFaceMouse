@@ -20,8 +20,9 @@ class NavigationTesteViewController: AccessibilityFaceAnchorViewController {
     delegateTabBar = self
     voiceAction.initialRecording()
     action.setTypeStartAction(withType: .eyeLeft)
+    title =  "Olho Esquerdo"
   }
-  
+
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     action.set(viewsAction: createViewAction())

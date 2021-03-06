@@ -8,26 +8,29 @@
 
 import Speech
 
-open class VoiceAction {
+open class VoiceAction: VoiceActionProtocol {
 
   private let audioEngine = AVAudioEngine()
   private var speechReconizer: SFSpeechRecognizer?
   private let request = SFSpeechAudioBufferRecognitionRequest()
   private var task: SFSpeechRecognitionTask!
   private var actionVoiceCommands: ActionVoiceCommands = ActionVoiceCommands.getDefault()
+  private var timer = TimerControl()
+  private var isCooldown : Bool = false
 
-  open weak var delegateActionVoice: VoiceActionActiveProtocol?
+  open weak var delegateResponseCommand: VoiceActionCommandProtocol?
   open weak var delegate: VoiceActionResponseProtocol?
 
   init(locale: Locale = ValuesConstants.locale) {
     speechReconizer = SFSpeechRecognizer(locale: locale)
+    timer.delegate = self
     request.requiresOnDeviceRecognition = true
   }
 
   open func set(TheActionWord actionVoiceCommands: ActionVoiceCommands) {
     self.actionVoiceCommands = actionVoiceCommands
   }
-  
+
   open func set(locale: Locale) {
     speechReconizer = SFSpeechRecognizer(locale: locale)
   }
@@ -82,6 +85,7 @@ open class VoiceAction {
   }
 
   private func recognitionTask() {
+
     task = speechReconizer?.recognitionTask(with: request, resultHandler: { (response, error) in
       guard let response = response else { return }
 
@@ -93,10 +97,20 @@ open class VoiceAction {
       let message = response.bestTranscription.formattedString.split(separator: " ")
       if let actioText = message.last {
         let actionWords = self.actionVoiceCommands.getCommandsString()
-        for action in actionWords where action.lowercased() == String(actioText).lowercased(){
-          self.delegateActionVoice?.commandDetected(withCommand: self.actionVoiceCommands.getCommandoEnum(withText: action))
+        print(actioText)
+        for action in actionWords where action.lowercased() == String(actioText).lowercased() && !self.isCooldown {
+          self.delegateResponseCommand?.commandDetected(withCommand: self.actionVoiceCommands.getCommandoEnum(withText: action))
+          self.timer.startTimer(withTimerSeconds: ValuesConstants.cooldown)
+          self.isCooldown = true
         }
       }
     })
+  }
+}
+
+extension VoiceAction: TimerActionResponseProtocol {
+  func finishTimer() {
+    print("called")
+    isCooldown = false
   }
 }

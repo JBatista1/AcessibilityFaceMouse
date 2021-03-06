@@ -21,7 +21,6 @@ open class AcessibilityViewController: UIViewController {
 
   open var cursor = UIImageView(frame: CGRect(x: Cursor.x, y: Cursor.y, width: Cursor.width, height: Cursor.heigh))
   open var action: ActionProtocol!
-  open var acessibilityTableView: UITableView?
 
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,9 +29,6 @@ open class AcessibilityViewController: UIViewController {
     insertCursor()
   }
 
-  public func set(withTableView table: UITableView) {
-    acessibilityTableView = table
-  }
   // MARK: - Private Class Methods
 
   private func setupCursor() {

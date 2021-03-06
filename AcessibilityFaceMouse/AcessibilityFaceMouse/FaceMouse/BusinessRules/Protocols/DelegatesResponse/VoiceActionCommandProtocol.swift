@@ -1,5 +1,5 @@
 //
-//  VoiceActionActiveProtocol.swift
+//  VoiceActionCommandProtocol.swift
 //  AcessibilityFaceMouse
 //
 //  Created by Joao Batista on 06/03/21.
@@ -7,6 +7,6 @@
 //
 
 
-public protocol VoiceActionActiveProtocol: AnyObject {
+public protocol VoiceActionCommandProtocol: AnyObject {
   func commandDetected(withCommand command: VoiceCommand)
 }

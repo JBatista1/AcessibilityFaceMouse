@@ -15,7 +15,6 @@ class SuccessViewController: AccessibilityFaceAnchorViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setDelegates()
-    set(withTableView: tableView)
     voiceAction.initialRecording()
   }
 

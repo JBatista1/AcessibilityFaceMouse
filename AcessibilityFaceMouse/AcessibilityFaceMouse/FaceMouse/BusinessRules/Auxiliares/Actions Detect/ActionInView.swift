@@ -24,6 +24,7 @@ class ActionInView: NSObject {
     self.target = target
     super.init()
     timer.delegate = self
+    position = nil
   }
 
   // MARK: - Private Method

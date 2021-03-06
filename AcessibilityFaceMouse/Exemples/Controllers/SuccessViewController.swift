@@ -14,15 +14,21 @@ class SuccessViewController: AccessibilityFaceAnchorViewController {
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    delegateNavigationBar = self
-    delegateTabBar = self
-    delegateCellView = self
+    setDelegates()
+    set(withTableView: tableView)
+    voiceAction.initialRecording()
   }
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-     action.set(viewsAction: createViewAction())
+    action.set(viewsAction: createViewAction())
+  }
+  
+  func setDelegates() {
+    delegateNavigationBar = self
+    delegateTabBar = self
+    delegateCellView = self
+    delegateScroll = self
   }
 
   func createViewAction() -> [ViewAction] {
@@ -34,20 +40,22 @@ class SuccessViewController: AccessibilityFaceAnchorViewController {
 
 extension SuccessViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 30
+    return 15
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.textLabel?.text = "AQUI MANO DO Cell\(indexPath.row)"
-
+    cell.tag = indexPath.row
+    cell.textLabel?.text = "AQUI Cell\(indexPath.row)"
     return cell
   }
+
   func numberOfSections(in tableView: UITableView) -> Int {
     return 3
   }
+
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Tatu bola piranha"
+    return "Sessão \(section)"
   }
 }
 
@@ -55,9 +63,11 @@ extension SuccessViewController: CellViewSelectedProtocol {
   func cellSelected(withIndex index: IndexPath) {
     title = "Row \(index.row)"
   }
+
 }
 
-extension SuccessViewController: TabBarSelectedProtocol, NavigationBackButtonProtocol {
+extension SuccessViewController: TabBarSelectedProtocol, NavigationBackButtonProtocol, ScrollActionDelegate {
+
   func tabBar(isSelectedIndex index: Int) {
     tabBarController?.selectedIndex = index
   }
@@ -65,4 +75,12 @@ extension SuccessViewController: TabBarSelectedProtocol, NavigationBackButtonPro
   func actionNavigationBack() {
     navigationController?.popViewController(animated: true)
   }
+  func scrollNext() {
+    tableView.nextCell()
+  }
+
+  func scrollBack() {
+    tableView.backCell()
+  }
 }
+

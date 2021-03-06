@@ -9,10 +9,10 @@
 import UIKit
 
 class CellCollectionViewCell: UICollectionViewCell {
-    
   @IBOutlet weak var itemLabel: UILabel!
 
   func setup(numberItem item: Int) {
     itemLabel.text = "Item \(item)"
+    backgroundColor = .red
   }
 }

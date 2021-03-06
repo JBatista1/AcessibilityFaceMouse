@@ -10,21 +10,18 @@ import UIKit
 
 extension UIView {
 
-  func absoluteValueToPositionCenter() -> CGPoint {
-    let rootView = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
-    guard let absoluteCenter  = self.superview?.convert(self.center, to: rootView) else { return CGPoint(x: 0, y: 0)}
-    return absoluteCenter
-  }
-
   func absoluteValueToFrame() -> CGRect {
     if let baseWindow = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first {
       return returnAbsoluteValue(basedInWindows: baseWindow)
     }
+    
     return CGRect(x: 0, y: 0, width: 0, height: 0)
   }
 
   private func returnAbsoluteValue(basedInWindows windows: UIWindow) -> CGRect {
-    guard let absoluteframe = self.superview?.convert(self.frame, to: windows) else { return CGRect(x: 0, y: 0, width: 0, height: 0)}
+    guard let absoluteframe = self.superview?.convert(self.frame, to: windows) else {
+      return CGRect(x: 0, y: 0, width: 0, height: 0)
+    }
     return absoluteframe
   }
 

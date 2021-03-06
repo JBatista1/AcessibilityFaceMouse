@@ -13,7 +13,3 @@ public protocol VoiceActionResponseProtocol: AnyObject {
   func errorPermission(status: SFSpeechRecognizerAuthorizationStatus)
   func errorGeneric()
 }
-
-public protocol VoiceActionActiveProtocol: AnyObject {
-  func commandDetected(withCommand command: String)
-}

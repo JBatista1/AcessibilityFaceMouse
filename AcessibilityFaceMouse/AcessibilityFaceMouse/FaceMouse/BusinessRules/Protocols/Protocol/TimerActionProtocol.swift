@@ -6,12 +6,6 @@
 //  Copyright © 2021 Joao Batista. All rights reserved.
 //
 
-import Foundation
-
-protocol TimerActionResponseProtocol: AnyObject {
-  func finishTimer()
-}
-
 protocol TimerActionProtocol {
   func startTimer(withTimerSeconds seconds: Int)
   func stopTimer()

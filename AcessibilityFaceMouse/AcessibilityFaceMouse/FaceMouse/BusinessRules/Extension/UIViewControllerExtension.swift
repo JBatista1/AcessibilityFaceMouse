@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIViewController {
+public extension UIViewController  {
 
   func getTabBar() -> UITabBar? {
     guard let tabBar = tabBarController?.tabBar else {

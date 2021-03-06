@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Teste de movimentação-->
+        <!--Lingua-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="usabilidad" id="BYZ-38-t0r" customClass="ViewController" customModule="Exemples" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8x-ce-rVw">
-                                <rect key="frame" x="20" y="108" width="50" height="50"/>
+                                <rect key="frame" x="20" y="108" width="70" height="70"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="sVl-Au-zLO"/>
-                                    <constraint firstAttribute="width" constant="50" id="ztS-00-qV0"/>
+                                    <constraint firstAttribute="height" constant="70" id="sVl-Au-zLO"/>
+                                    <constraint firstAttribute="width" constant="70" id="ztS-00-qV0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="1">
@@ -29,11 +29,11 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-E5-5F1">
-                                <rect key="frame" x="182" y="108" width="50" height="50"/>
+                                <rect key="frame" x="172" y="108" width="70" height="70"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="epw-5i-8U0"/>
-                                    <constraint firstAttribute="width" constant="50" id="sX2-3I-a5n"/>
+                                    <constraint firstAttribute="height" constant="70" id="epw-5i-8U0"/>
+                                    <constraint firstAttribute="width" constant="70" id="sX2-3I-a5n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="2">
@@ -41,11 +41,11 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-NH-ZqA">
-                                <rect key="frame" x="344" y="108" width="50" height="50"/>
+                                <rect key="frame" x="324" y="108" width="70" height="70"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BFd-4w-0bH"/>
-                                    <constraint firstAttribute="width" constant="50" id="xV0-Wv-gkp"/>
+                                    <constraint firstAttribute="height" constant="70" id="BFd-4w-0bH"/>
+                                    <constraint firstAttribute="width" constant="70" id="xV0-Wv-gkp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="3">
@@ -143,7 +143,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Teste de movimentação" id="IEb-tO-si9"/>
+                    <tabBarItem key="tabBarItem" title="Testar movimentação" image="hurricane" catalog="system" id="1IJ-BS-3fq"/>
+                    <navigationItem key="navigationItem" title="Lingua" id="IEb-tO-si9"/>
                     <connections>
                         <outlet property="feedbackLabel" destination="otn-47-obO" id="2Eb-Mm-ZN6"/>
                         <outlet property="viewEight" destination="FzV-yi-ObS" id="JmL-nB-FKB"/>
@@ -158,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2197.1014492753625" y="-239.0625"/>
+            <point key="canvasLocation" x="1213" y="-239"/>
         </scene>
         <!--Teste Navigation-->
         <scene sceneID="5xf-66-VxM">
@@ -201,7 +202,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b21-o7-Qsz"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iXC-UN-Hte"/>
+                    <tabBarItem key="tabBarItem" title="Teste fe fluxo" image="shuffle" catalog="system" selectedImage="shuffle" id="BCk-q3-a2s"/>
+                    <navigationItem key="navigationItem" title="Olho esquerdo" id="iXC-UN-Hte"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="bookImageView" destination="pMH-rK-agu" id="O93-tY-Hjp"/>
@@ -210,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgT-KE-uVL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1287" y="508"/>
+            <point key="canvasLocation" x="265" y="457"/>
         </scene>
         <!--Success View Controller-->
         <scene sceneID="dm7-Rz-ceT">
@@ -244,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yw-qp-ytu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2197" y="508"/>
+            <point key="canvasLocation" x="1058" y="457"/>
         </scene>
         <!--Teste Collection-->
         <scene sceneID="22m-f2-SHQ">
@@ -257,22 +259,23 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdj-wx-To7">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="15" id="DB9-kE-GQt">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="15" id="DB9-kE-GQt">
                                     <size key="itemSize" width="170" height="200"/>
+                                    <size key="estimatedItemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="8" minY="11" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="MRM-0v-KZ6" customClass="CellCollectionViewCell" customModule="Exemples" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="11" width="170" height="200"/>
+                                        <rect key="frame" x="8" y="11" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kvu-7Z-Pp5">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCO-E3-17C">
-                                                    <rect key="frame" x="64" y="89.5" width="42" height="21"/>
+                                                    <rect key="frame" x="54" y="64.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -283,6 +286,7 @@
                                                 <constraint firstItem="QCO-E3-17C" firstAttribute="centerY" secondItem="kvu-7Z-Pp5" secondAttribute="centerY" id="JlE-14-2Wh"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="150"/>
                                         <connections>
                                             <outlet property="itemLabel" destination="QCO-E3-17C" id="F1h-OD-9V0"/>
                                         </connections>
@@ -299,7 +303,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nBi-uH-8Qp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Teste Collection" selectedImage="rectangle.split.3x3" catalog="system" id="5Q5-jT-gP9"/>
+                    <tabBarItem key="tabBarItem" title="Teste Collection" image="rectangle.split.3x3" catalog="system" selectedImage="rectangle.split.3x3" id="5Q5-jT-gP9"/>
                     <connections>
                         <outlet property="collectionView" destination="mdj-wx-To7" id="SY9-gf-OA5"/>
                     </connections>
@@ -319,52 +323,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="KJT-pf-Cmv" kind="relationship" relationship="viewControllers" id="lCB-EZ-LtK"/>
-                        <segue destination="93f-IZ-fh0" kind="relationship" relationship="viewControllers" id="gXU-qY-2Ss"/>
-                        <segue destination="ezK-Jt-wyl" kind="relationship" relationship="viewControllers" id="lfs-KH-suj"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fg1-qU-NUJ"/>
+                        <segue destination="jvm-32-JjW" kind="relationship" relationship="viewControllers" id="n8r-wk-myv"/>
+                        <segue destination="ezK-Jt-wyl" kind="relationship" relationship="viewControllers" id="PnO-k1-cSh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMM-Bp-TL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="266" y="-239"/>
-        </scene>
-        <!--Table naviagtion-->
-        <scene sceneID="WEL-sV-Yod">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="93f-IZ-fh0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table naviagtion" selectedImage="table.fill" catalog="system" id="xjc-17-M51"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D02-sE-0aI">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jvm-32-JjW" kind="relationship" relationship="rootViewController" id="kCH-oi-OxL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LYU-BU-XiG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="264" y="508"/>
-        </scene>
-        <!--Teste usabilidade-->
-        <scene sceneID="tXD-ZE-bVo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KJT-pf-Cmv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Teste usabilidade" selectedImage="wrench" catalog="system" id="j6S-oW-D7P"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KZ2-UR-tL0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3QC-ow-q7V"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QKY-UI-RDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1286.9565217391305" y="-239.0625"/>
         </scene>
         <!--Capturar face-->
         <scene sceneID="Msg-Xb-7rO">
@@ -383,7 +349,7 @@
             </objects>
             <point key="canvasLocation" x="-1736" y="-239"/>
         </scene>
-        <!--Captura de movimento-->
+        <!--Captura -->
         <scene sceneID="HSN-R9-aLR">
             <objects>
                 <viewController id="1ZU-0K-vmh" customClass="CaptureFaceSensibilityViewController" customModule="Exemples" customModuleProvider="target" sceneMemberID="viewController">
@@ -449,7 +415,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I1z-at-iI4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Captura de movimento" id="V8V-F5-1uH"/>
+                    <navigationItem key="navigationItem" title="Captura " id="V8V-F5-1uH"/>
                     <connections>
                         <outlet property="arrowImage" destination="P7p-1X-gVW" id="igJ-Ml-Vep"/>
                         <outlet property="captureButton" destination="LIP-sG-aiD" id="4hQ-C6-Nrs"/>
@@ -465,9 +431,9 @@
     <resources>
         <image name="arrowTop" width="217" height="344"/>
         <image name="book.fill" catalog="system" width="128" height="100"/>
+        <image name="hurricane" catalog="system" width="91" height="128"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.split.3x3" catalog="system" width="128" height="93"/>
-        <image name="table.fill" catalog="system" width="128" height="93"/>
-        <image name="wrench" catalog="system" width="128" height="120"/>
+        <image name="shuffle" catalog="system" width="128" height="93"/>
     </resources>
 </document>

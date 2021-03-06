@@ -31,6 +31,7 @@ class ViewController: AccessibilityFaceAnchorViewController {
     delegateTabBar = self
     voiceAction.initialRecording()
     voiceAction.delegate = self
+    action.setTypeStartAction(withType: .tongue)
   }
   
   override func viewWillAppear(_ animated: Bool) {

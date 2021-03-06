@@ -6,8 +6,6 @@
 //  Copyright © 2021 Joao Batista. All rights reserved.
 //
 
-import Foundation
-
 public enum TypeStartAction {
   case eyeLeft
   case eyeRight

@@ -31,6 +31,7 @@ class CollectionTestViewController: AccessibilityFaceAnchorViewController {
   func collectionViewConfiguration() {
     collectionView.dataSource = self
     collectionView.delegate = self
+    delegateScroll = self
   }
 
   func createViewAction() -> [ViewAction] {
@@ -69,5 +70,16 @@ extension CollectionTestViewController: TabBarSelectedProtocol {
 
   func tabBar(isSelectedIndex index: Int) {
     tabBarController?.selectedIndex = index
+  }
+}
+
+extension CollectionTestViewController: ScrollActionDelegate {
+  func scrollNext() {
+    print("CalleS")
+    collectionView.nextCell()
+  }
+
+  func scrollBack() {
+    collectionView.backCell()
   }
 }

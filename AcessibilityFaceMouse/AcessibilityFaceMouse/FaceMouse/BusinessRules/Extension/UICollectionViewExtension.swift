@@ -22,4 +22,27 @@ public extension UICollectionView {
     }
     return cells
   }
+  
+  func nextCell(withScrollPosition scrollPosition: ScrollPosition = .bottom) {
+    guard var indexPath = self.indexPathsForVisibleItems.sorted().last else {return}
+    if indexPath.item + 1 <= self.numberOfItems(inSection: indexPath.section) - 1 {
+      indexPath.item += 1
+    }else if indexPath.section + 1 <= self.numberOfSections - 1 {
+      indexPath.section += 1
+      indexPath.item = 0
+    }
+    self.scrollToItem(at: indexPath, at: scrollPosition, animated: true)
+  }
+
+  func backCell(withScrollPosition scrollPosition: ScrollPosition = .top) {
+    guard var indexPath = self.indexPathsForVisibleItems.first else {return}
+    if indexPath.item - 1 >= 0 {
+      indexPath.item -= 1
+    }else if indexPath.section - 2 >= 0 {
+      indexPath.section -= 1
+      indexPath.item = self.numberOfItems(inSection: indexPath.section) - 1
+    }
+    self.scrollToItem(at: indexPath, at: scrollPosition, animated: true)
+    self.reloadInputViews()
+  }
 }

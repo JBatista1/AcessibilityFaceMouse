@@ -19,7 +19,9 @@ class NavigationTesteViewController: AccessibilityFaceAnchorViewController {
     addActionUIImageView()
     delegateTabBar = self
     voiceAction.initialRecording()
+    action.setTypeStartAction(withType: .eyeLeft)
   }
+  
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     action.set(viewsAction: createViewAction())

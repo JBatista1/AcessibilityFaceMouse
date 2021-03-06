@@ -45,7 +45,8 @@ extension SuccessViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
-    cell.textLabel?.text = "AQUI MANO DO Cell\(indexPath.row)"
+    cell.tag = indexPath.row
+    cell.textLabel?.text = "AQUI Cell\(indexPath.row)"
     return cell
   }
 

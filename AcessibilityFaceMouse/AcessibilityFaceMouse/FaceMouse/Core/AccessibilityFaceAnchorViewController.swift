@@ -18,6 +18,8 @@ open class AccessibilityFaceAnchorViewController: AcessibilityViewController {
   private let moveCursor: MoveCursorProtocol = MoveCursorFaceAnchor()
   private var isShow = true
   private var actualPoint: CGPoint = .zero
+  private var timer: TimerControl = TimerControl()
+  private var isCooldown = false
 
   open var voiceAction = VoiceAction()
   
@@ -28,6 +30,7 @@ open class AccessibilityFaceAnchorViewController: AcessibilityViewController {
     setupSceneView()
     setupViews()
     voiceAction.delegateActionVoice = self
+    timer.delegate = self
   }
 
   open override func viewDidAppear(_ animated: Bool) {
@@ -76,6 +79,21 @@ open class AccessibilityFaceAnchorViewController: AcessibilityViewController {
     view.addSubview(sceneView)
   }
 
+  private func coordinatorVoiceAction(WithCommand command: VoiceCommand) {
+    switch command {
+    case .action:
+      actionVoice(withPoint: actualPoint)
+    case .backNavigation:
+      selectedBackNavigationBar()
+    case .scrollNext:
+      scrollNextCell()
+    case .scrollBack:
+      scrollBackCell()
+    case .unknown:
+      break
+    }
+  }
+
   private func animateCursor(toNextPoint nextPoint: CGPoint) {
     DispatchQueue.main.async {
       UIView.animate(withDuration: 0.9, delay: 0, usingSpringWithDamping: 3, initialSpringVelocity: 0.2, options: [.curveLinear], animations: {
@@ -116,17 +134,16 @@ extension AccessibilityFaceAnchorViewController: ARSCNViewDelegate, ARSessionDel
 
 extension AccessibilityFaceAnchorViewController: VoiceActionActiveProtocol {
   public func commandDetected(withCommand command: VoiceCommand) {
-    switch command {
-    case .action:
-      actionVoice(withPoint: actualPoint)
-    case .backNavigation:
-      selectedBackNavigationBar()
-    case .scrollNext:
-      scrollNextCell()
-    case .scrollBack:
-      scrollBackCell()
-    case .unknown:
-      break
+    if !isCooldown {
+      coordinatorVoiceAction(WithCommand: command)
+      isCooldown = true
+      timer.startTimer(withTimerSeconds: ValuesConstants.cooldown)
     }
+  }
+}
+
+extension AccessibilityFaceAnchorViewController: TimerActionResponseProtocol {
+  func finishTimer() {
+    isCooldown = false
   }
 }

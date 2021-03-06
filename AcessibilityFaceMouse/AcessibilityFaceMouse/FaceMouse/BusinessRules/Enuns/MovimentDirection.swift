@@ -6,8 +6,6 @@
 //  Copyright © 2021 Joao Batista. All rights reserved.
 //
 
-import Foundation
-
 enum MovimentDirection {
   case positive
   case negative

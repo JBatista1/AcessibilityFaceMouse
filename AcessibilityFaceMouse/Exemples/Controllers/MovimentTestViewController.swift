@@ -10,7 +10,7 @@ import UIKit
 import Speech
 import AcessibilityFaceMouse
 
-class ViewController: AccessibilityFaceAnchorViewController {
+class MovimentTestViewController: AccessibilityFaceAnchorViewController {
 
   // MARK: - Outlets
 
@@ -31,7 +31,7 @@ class ViewController: AccessibilityFaceAnchorViewController {
     delegateTabBar = self
     voiceAction.initialRecording()
     voiceAction.delegate = self
-    action.setTypeStartAction(withType: .tongue)
+    action.setTypeStartAction(withType: .eyeRight)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +49,7 @@ class ViewController: AccessibilityFaceAnchorViewController {
   }
 
   func createViewAction() -> [ViewAction] {
-    var viewsAction: [ViewAction] = [ViewAction(view: viewOne, selector: #selector(ViewController.actionOne)),
+    var viewsAction: [ViewAction] = [ViewAction(view: viewOne, selector: #selector(MovimentTestViewController.actionOne)),
                                      ViewAction(view: viewTwo, selector: #selector(actionTwo)),
                                      ViewAction(view: viewThree, selector: #selector(actionThree)),
                                      ViewAction(view: viewFour, selector: #selector(actionFour)),
@@ -94,13 +94,13 @@ class ViewController: AccessibilityFaceAnchorViewController {
   }
 }
 
-extension ViewController: TabBarSelectedProtocol {
+extension MovimentTestViewController: TabBarSelectedProtocol {
   func tabBar(isSelectedIndex index: Int) {
     tabBarController?.selectedIndex = index
   }
 }
 
-extension ViewController: VoiceActionResponseProtocol {
+extension MovimentTestViewController: VoiceActionResponseProtocol {
   func permissionGranted() {
     print("Permissão Permitida")
   }

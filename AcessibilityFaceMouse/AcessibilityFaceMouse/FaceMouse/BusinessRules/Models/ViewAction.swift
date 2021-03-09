@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct ViewAction {
+public struct ViewAction: Equatable {
   let view: UIView
   let selector: Selector
 
@@ -17,3 +17,4 @@ public struct ViewAction {
     self.selector = selector
   }
 }
+

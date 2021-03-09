@@ -1,14 +1,14 @@
 //
-//  MockTestViewController.swift
+//  MockItemTabbarViewController.swift
 //  AcessibilityFaceMouseTests
 //
-//  Created by Joao Batista on 06/03/21.
+//  Created by Joao Batista on 08/03/21.
 //  Copyright © 2021 Joao Batista. All rights reserved.
 //
 
 import UIKit
 
-class MockTestViewController: UIViewController {
+class MockItemTabbarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

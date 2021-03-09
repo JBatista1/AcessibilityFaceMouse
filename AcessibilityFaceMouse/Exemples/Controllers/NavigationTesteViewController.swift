@@ -41,7 +41,7 @@ class NavigationTesteViewController: AccessibilityFaceAnchorViewController {
   }
 
   @IBAction func tappedNextScreen(_ sender: Any) {
-    if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SuccessViewController") as? SuccessViewController {
+    if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableExempleViewController") as? TableExempleViewController {
       if let navigator = navigationController {
         navigator.pushViewController(viewController, animated: true)
       }

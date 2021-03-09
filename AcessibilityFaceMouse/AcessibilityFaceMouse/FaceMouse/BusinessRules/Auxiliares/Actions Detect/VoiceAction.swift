@@ -11,12 +11,13 @@ import Speech
 open class VoiceAction: VoiceActionProtocol {
 
   private let audioEngine = AVAudioEngine()
-  private var speechReconizer: SFSpeechRecognizer?
+
   private let request = SFSpeechAudioBufferRecognitionRequest()
   private var task: SFSpeechRecognitionTask!
-  private var actionVoiceCommands: ActionVoiceCommands = ActionVoiceCommands.getDefault()
   private var timer = TimerControl()
-  private var isCooldown : Bool = false
+  private (set) var isCooldown : Bool = false
+  private (set) var speechReconizer: SFSpeechRecognizer?
+  private (set) var actionVoiceCommands: ActionVoiceCommands = ActionVoiceCommands.getDefault()
 
   open weak var delegateResponseCommand: VoiceActionCommandProtocol?
   open weak var delegate: VoiceActionResponseProtocol?

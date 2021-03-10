@@ -37,6 +37,7 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
     let layout = UICollectionViewFlowLayout()
     mockUICollectionView = UICollectionView(frame: CGRect(x: 0, y: 1200, width: 200, height: 200), collectionViewLayout: layout)
     insertViews()
+    mockUITableView.dataSource = self
   }
 
   func insertViews() {
@@ -53,11 +54,11 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
 
   func getViewsActions() -> [ViewAction] {
     let viewActions = [ViewAction(view: mockView, selector: #selector(mockViewSelector)),
-    ViewAction(view: mockButton, selector: #selector(mockButtonSelector)),
-    ViewAction(view: mockTabBar, selector: #selector(mockTabBarSelector(index:))),
-    ViewAction(view: mockUiimageViews, selector: #selector(mockUIImageSelector)),
-    ViewAction(view: mockUITableView, selector: #selector(mockTableSelector)),
-    ViewAction(view: mockUICollectionView, selector: #selector(mockCollectionSelector))]
+                       ViewAction(view: mockButton, selector: #selector(mockButtonSelector)),
+                       ViewAction(view: mockTabBar, selector: #selector(mockTabBarSelector(index:))),
+                       ViewAction(view: mockUiimageViews, selector: #selector(mockUIImageSelector)),
+                       ViewAction(view: mockUITableView, selector: #selector(mockTableSelector)),
+                       ViewAction(view: mockUICollectionView, selector: #selector(mockCollectionSelector))]
     return viewActions
   }
 
@@ -80,4 +81,13 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
   @objc func mockCollectionSelector() {}
 }
 
+extension MockTestViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 10
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return UITableViewCell()
+  }
+}
 

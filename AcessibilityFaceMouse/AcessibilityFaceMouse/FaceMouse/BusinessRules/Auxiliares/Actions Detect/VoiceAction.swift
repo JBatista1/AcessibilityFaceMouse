@@ -10,12 +10,13 @@ import Speech
 
 open class VoiceAction: VoiceActionProtocol {
 
-  private let audioEngine = AVAudioEngine()
+  internal var audioEngine = AVAudioEngine()
 
   private let request = SFSpeechAudioBufferRecognitionRequest()
   private var task: SFSpeechRecognitionTask!
   private var timer = TimerControl()
   private (set) var isCooldown : Bool = false
+  private (set) var isInitialized : Bool = false
   private (set) var speechReconizer: SFSpeechRecognizer?
   private (set) var actionVoiceCommands: ActionVoiceCommands = ActionVoiceCommands.getDefault()
 
@@ -37,7 +38,7 @@ open class VoiceAction: VoiceActionProtocol {
   }
 
   open func start() {
-    if !audioEngine.isRunning {
+    if !audioEngine.isRunning && isInitialized {
       startAudioEngine()
     }
   }
@@ -66,6 +67,7 @@ open class VoiceAction: VoiceActionProtocol {
   }
 
   open func initialRecording() {
+    isInitialized = true
     let node = audioEngine.inputNode
     let recordingFormat = node.outputFormat(forBus: 0)
 
@@ -74,6 +76,7 @@ open class VoiceAction: VoiceActionProtocol {
     }
     startAudioEngine()
   }
+
   private func startAudioEngine() {
     audioEngine.prepare()
     do {
@@ -88,7 +91,10 @@ open class VoiceAction: VoiceActionProtocol {
   private func recognitionTask() {
 
     task = speechReconizer?.recognitionTask(with: request, resultHandler: { (response, error) in
-      guard let response = response else { return }
+      guard let response = response else {
+        self.delegate?.errorGeneric()
+        return
+      }
 
       if error != nil {
         self.delegate?.errorGeneric()
@@ -98,7 +104,6 @@ open class VoiceAction: VoiceActionProtocol {
       let message = response.bestTranscription.formattedString.split(separator: " ")
       if let actioText = message.last {
         let actionWords = self.actionVoiceCommands.getCommandsString()
-        print(actioText)
         for action in actionWords where action.lowercased() == String(actioText).lowercased() && !self.isCooldown {
           self.delegateResponseCommand?.commandDetected(withCommand: self.actionVoiceCommands.getCommandoEnum(withText: action))
           self.timer.startTimer(withTimerSeconds: ValuesConstants.cooldown)
@@ -111,7 +116,6 @@ open class VoiceAction: VoiceActionProtocol {
 
 extension VoiceAction: TimerActionResponseProtocol {
   func finishTimer() {
-    print("called")
     isCooldown = false
   }
 }

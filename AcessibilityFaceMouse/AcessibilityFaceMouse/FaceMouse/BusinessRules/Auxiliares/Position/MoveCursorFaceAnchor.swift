@@ -21,7 +21,7 @@ final class MoveCursorFaceAnchor {
   // MARK: - Life Cicle
 
   init(faceSensitivity: FaceSensitivity? = nil) {
-    if let sensitivity =  faceSensitivity {
+    if let sensitivity = faceSensitivity {
       self.faceSensitivity = sensitivity
     }
   }

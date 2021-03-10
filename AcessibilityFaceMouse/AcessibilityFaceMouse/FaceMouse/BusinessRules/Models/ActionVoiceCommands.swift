@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ActionVoiceCommands {
+public struct ActionVoiceCommands: Equatable {
 
   var action: String
   var backNavigation: String

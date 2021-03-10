@@ -12,11 +12,11 @@ class ManagePointSensibility {
 
   private let tolerance: CGFloat
   private let numberAcceptedValues: Int
-  private var valuesAceepted: [CGFloat] = []
+  private (set) var valuesAceepted: [CGFloat] = []
   private let startValue: Int
 
-  private var lastValue: CGFloat = 0.0
-  private var isInitial: Bool = true
+  private (set) var lastValue: CGFloat = 0.0
+  private (set) var isInitial: Bool = true
   private var isStart: Bool = false
   weak var delegate: ManagerPointSesibilittyProtocol?
 
@@ -51,6 +51,7 @@ class ManagePointSensibility {
       resetProprety()
     }
   }
+
   private func resetProprety() {
     valuesAceepted = []
     isStart = false
@@ -66,9 +67,8 @@ class ManagePointSensibility {
   private func getInitialPosition(withValue value: CGFloat) {
     if isInitial {
       lastValue = value
-    } else {
       isInitial = false
-    }
+    } 
   }
 
   private func getValue(withThePoint point: CGPoint, andDirection direction: DirectiorFaceMoviment) -> CGFloat {

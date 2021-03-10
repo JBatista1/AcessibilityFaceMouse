@@ -46,6 +46,12 @@
 		9A35052125F054E700CDCAB2 /* ActionVoiceCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052025F054E700CDCAB2 /* ActionVoiceCommands.swift */; };
 		9A35052325F055DC00CDCAB2 /* VoiceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052225F055DC00CDCAB2 /* VoiceCommand.swift */; };
 		9A35052525F0608000CDCAB2 /* ScrollActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052425F0608000CDCAB2 /* ScrollActionDelegate.swift */; };
+		9A38994A25F82FFA0059F45E /* VoiceActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38994925F82FFA0059F45E /* VoiceActionTest.swift */; };
+		9A38994C25F8330B0059F45E /* MockVoiceActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38994B25F8330B0059F45E /* MockVoiceActionSpy.swift */; };
+		9A3C32A625F83F660025CC50 /* MockManagePointSensibilityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C32A525F83F660025CC50 /* MockManagePointSensibilityDelegate.swift */; };
+		9A3C32A925F84B010025CC50 /* MoveCursorFaceAnchorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C32A825F84B010025CC50 /* MoveCursorFaceAnchorTest.swift */; };
+		9A4C8CB825F83CCA00395D77 /* ViewControllerExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C8CB725F83CCA00395D77 /* ViewControllerExtensionTest.swift */; };
+		9A4C8CBC25F83D7A00395D77 /* ManagePointSensibilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C8CBB25F83D7A00395D77 /* ManagePointSensibilityTest.swift */; };
 		9A7B779625F6E54200D91564 /* MockItemTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B779525F6E54200D91564 /* MockItemTabbarViewController.swift */; };
 		9A8C67D925F041270018F215 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C67D825F041270018F215 /* Assets.swift */; };
 		9ABCA9C825F414FB002A700B /* VoiceActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABCA9C725F414FB002A700B /* VoiceActionProtocol.swift */; };
@@ -152,6 +158,12 @@
 		9A35052025F054E700CDCAB2 /* ActionVoiceCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionVoiceCommands.swift; sourceTree = "<group>"; };
 		9A35052225F055DC00CDCAB2 /* VoiceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCommand.swift; sourceTree = "<group>"; };
 		9A35052425F0608000CDCAB2 /* ScrollActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollActionDelegate.swift; sourceTree = "<group>"; };
+		9A38994925F82FFA0059F45E /* VoiceActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActionTest.swift; sourceTree = "<group>"; };
+		9A38994B25F8330B0059F45E /* MockVoiceActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVoiceActionSpy.swift; sourceTree = "<group>"; };
+		9A3C32A525F83F660025CC50 /* MockManagePointSensibilityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockManagePointSensibilityDelegate.swift; sourceTree = "<group>"; };
+		9A3C32A825F84B010025CC50 /* MoveCursorFaceAnchorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCursorFaceAnchorTest.swift; sourceTree = "<group>"; };
+		9A4C8CB725F83CCA00395D77 /* ViewControllerExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensionTest.swift; sourceTree = "<group>"; };
+		9A4C8CBB25F83D7A00395D77 /* ManagePointSensibilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagePointSensibilityTest.swift; sourceTree = "<group>"; };
 		9A7B779525F6E54200D91564 /* MockItemTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemTabbarViewController.swift; sourceTree = "<group>"; };
 		9A8C67D825F041270018F215 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9ABCA9C725F414FB002A700B /* VoiceActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActionProtocol.swift; sourceTree = "<group>"; };
@@ -250,9 +262,10 @@
 		9A0A300D25F0370D0013DA6B /* AcessibilityFaceMouseTests */ = {
 			isa = PBXGroup;
 			children = (
+				9A4C8CBA25F83D1100395D77 /* Extensions */,
+				9A4C8CB625F83C8100395D77 /* Auxiliares */,
 				9A7B779225F6D47200D91564 /* Utils */,
 				9AC752A025F410D5005345F5 /* Mocks */,
-				9AC7529D25F40FC9005345F5 /* ActionsDetectTest */,
 				9A0A301025F0370D0013DA6B /* Info.plist */,
 			);
 			path = AcessibilityFaceMouseTests;
@@ -375,6 +388,40 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9A3C32A725F84AEE0025CC50 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				9A3C32A825F84B010025CC50 /* MoveCursorFaceAnchorTest.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		9A4C8CB625F83C8100395D77 /* Auxiliares */ = {
+			isa = PBXGroup;
+			children = (
+				9A3C32A725F84AEE0025CC50 /* Position */,
+				9A4C8CB925F83D0800395D77 /* Manages */,
+				9AC7529D25F40FC9005345F5 /* ActionsDetectTest */,
+			);
+			path = Auxiliares;
+			sourceTree = "<group>";
+		};
+		9A4C8CB925F83D0800395D77 /* Manages */ = {
+			isa = PBXGroup;
+			children = (
+				9A4C8CBB25F83D7A00395D77 /* ManagePointSensibilityTest.swift */,
+			);
+			path = Manages;
+			sourceTree = "<group>";
+		};
+		9A4C8CBA25F83D1100395D77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A4C8CB725F83CCA00395D77 /* ViewControllerExtensionTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9A7B779225F6D47200D91564 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				9AC7529E25F40FFF005345F5 /* ActionInViewTest.swift */,
+				9A38994925F82FFA0059F45E /* VoiceActionTest.swift */,
 			);
 			path = ActionsDetectTest;
 			sourceTree = "<group>";
@@ -491,6 +539,8 @@
 				9AC752A725F41152005345F5 /* MockTestViewController.swift */,
 				9ABEC5BD25F5727C000C83A7 /* MockPosition.swift */,
 				9A7B779525F6E54200D91564 /* MockItemTabbarViewController.swift */,
+				9A38994B25F8330B0059F45E /* MockVoiceActionSpy.swift */,
+				9A3C32A525F83F660025CC50 /* MockManagePointSensibilityDelegate.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -754,8 +804,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3C32A925F84B010025CC50 /* MoveCursorFaceAnchorTest.swift in Sources */,
+				9A3C32A625F83F660025CC50 /* MockManagePointSensibilityDelegate.swift in Sources */,
 				9AC752A825F41152005345F5 /* MockTestViewController.swift in Sources */,
+				9A4C8CB825F83CCA00395D77 /* ViewControllerExtensionTest.swift in Sources */,
+				9A4C8CBC25F83D7A00395D77 /* ManagePointSensibilityTest.swift in Sources */,
 				9A7B779625F6E54200D91564 /* MockItemTabbarViewController.swift in Sources */,
+				9A38994C25F8330B0059F45E /* MockVoiceActionSpy.swift in Sources */,
+				9A38994A25F82FFA0059F45E /* VoiceActionTest.swift in Sources */,
 				9ABEC5BE25F5727C000C83A7 /* MockPosition.swift in Sources */,
 				9AC7529F25F40FFF005345F5 /* ActionInViewTest.swift in Sources */,
 			);

@@ -10,7 +10,6 @@ import XCTest
 import UIKit
 @testable import AcessibilityFaceMouse
 
-
 class ActionInViewTests: XCTestCase {
 
   var actionView: ActionInView!
@@ -57,6 +56,18 @@ class ActionInViewTests: XCTestCase {
     actionView.set(viewsAction: [viewsAction])
     XCTAssertEqual(actionView.viewsAction.count, 1, "View Action não foi inserida ou existe mais de uma")
     XCTAssertEqual(actionView.viewsAction.first, viewsAction, "View Actions inserida não é a mesma que esta no objecto actionViews")
+
+  }
+
+  func testDefaultPositionNull() throws {
+    actionView = ActionInView(target: mockViewControllerSut)
+    XCTAssertNil(actionView.position, "Position deveria ser criada ao receber as views")
+  }
+
+  func testDefaultPositionNotNull() throws {
+    actionView = ActionInView(target: mockViewControllerSut)
+    actionView.set(viewsAction: mockViewControllerSut.getViewsActions())
+    XCTAssertNotNil(actionView.position, "Position deveria ter sido criada")
   }
 
   // MARK: - GetViewAction Test
@@ -194,8 +205,8 @@ class ActionInViewTests: XCTestCase {
     XCTAssertEqual(mockViewControllerSut.mockUICollectionView.accessibilityIdentifier, AccessibilityUIType.uiCollectionView.identifier)
   }
 
-  
   // MARK: - Types Return Selector
+
   func testVerifySpecialTargetUITabBar() throws {
     let exp = expectation(description: "Call back position")
     prepareTestGetViewForAction(withPoint: CGPoint(x: 0, y: 20))

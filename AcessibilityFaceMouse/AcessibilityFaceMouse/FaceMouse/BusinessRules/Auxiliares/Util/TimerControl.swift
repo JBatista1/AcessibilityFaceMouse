@@ -10,7 +10,7 @@ import Foundation
 
 class TimerControl: TimerActionProtocol {
 
-  private var stop: Bool = false
+  private(set)  var stop: Bool = false
   private var timer: Timer?
   private var secondTimer: Int = 0
   private var runTimer: Int = 0

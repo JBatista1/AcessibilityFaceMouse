@@ -111,6 +111,7 @@ extension AccessibilityFaceAnchorViewController: ARSCNViewDelegate, ARSessionDel
       let tongue = faceAnchor.blendShapes[.tongueOut] as? CGFloat else { return }
     let point = CGPoint(x: CGFloat(node.eulerAngles.y).truncate(), y: CGFloat(node.eulerAngles.x).truncate())
     actualPoint = self.moveCursor.getNextPosition(withPoint: point)
+    print(actualPoint)
     if action.getType() != .voice {
        self.verifyAction(withValueEyeRight: eyeRight, theEyeLeft: eyeLeft, tongueValue: tongue, andPoint: actualPoint)
     }

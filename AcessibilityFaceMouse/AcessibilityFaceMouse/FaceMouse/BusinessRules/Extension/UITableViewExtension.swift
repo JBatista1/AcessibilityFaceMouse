@@ -13,7 +13,7 @@ public extension UITableView {
   func getCell() -> [UITableViewCell] {
     var cells = [UITableViewCell]()
 
-    if self.numberOfSections == 0 || (self.numberOfSections == 1 && self.numberOfRows(inSection: 0) == 0){
+    if self.numberOfSections == 0 || (self.numberOfSections == 1 && self.numberOfRows(inSection: 0) == 0) || self.numberOfRows(inSection: 0) == 0 {
       return []
     }
 
@@ -29,7 +29,8 @@ public extension UITableView {
   }
 
   func nextCell(withScrollPosition scrollPosition: ScrollPosition = .none) {
-    guard var actualIndexPath = self.indexPathsForVisibleRows?.last else {return}
+    guard var actualIndexPath = self.indexPathsForVisibleRows?.last else { return
+    }
     if actualIndexPath.row + 1 <= self.numberOfRows(inSection: actualIndexPath.section) - 1 {
       actualIndexPath.row += 1
     }else if actualIndexPath.section + 1 <= self.numberOfSections - 1 {

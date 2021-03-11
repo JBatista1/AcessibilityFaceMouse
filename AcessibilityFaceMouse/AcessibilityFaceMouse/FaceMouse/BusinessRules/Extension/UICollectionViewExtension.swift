@@ -13,7 +13,7 @@ public extension UICollectionView {
   func getCell() -> [UICollectionViewCell] {
     var cells = [UICollectionViewCell]()
 
-    if self.numberOfSections == 0 || (self.numberOfSections == 1 && self.numberOfItems(inSection: 0) == 0){
+    if self.numberOfSections == 0 || (self.numberOfSections == 1 && self.numberOfItems(inSection: 0) == 0) || self.numberOfItems(inSection: 0) == 0 {
       return []
     }
 

@@ -6,30 +6,73 @@
 //  Copyright © 2021 Joao Batista. All rights reserved.
 //
 
-
 import XCTest
 import UIKit
 @testable import AcessibilityFaceMouse
 
 class ViewControllerExtensionTest: XCTestCase {
-  
-  var voiceAction: VoiceAction!
-  var delegateVoiceSpy = MockVoiceActionSpy()
-  
+
+  var mockTabbarControllerDummy = MockTabBarController()
+  var mockNavigationControllerDummy = MockNavigationController()
+
   override func setUpWithError() throws {
-    voiceAction = VoiceAction()
-    voiceAction.delegate = delegateVoiceSpy
-    voiceAction.delegateResponseCommand = delegateVoiceSpy
+
+    //MARK: - Setup TabBar
+
+    mockTabbarControllerDummy.beginAppearanceTransition(true, animated: false)
+    mockTabbarControllerDummy.endAppearanceTransition()
+    mockTabbarControllerDummy.viewWillAppear(true)
+
+     //MARK: - Setup NavigationBar
+
+    mockNavigationControllerDummy.beginAppearanceTransition(true, animated: false)
+    mockNavigationControllerDummy.endAppearanceTransition()
+    mockNavigationControllerDummy.viewWillAppear(true)
   }
   
   override func tearDownWithError() throws {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+  }
+
+  @objc func testSelector(){}
+
+  // MARK: - Test TabBar -
+  
+  func testGetTabBarSucess() throws {
+    XCTAssertNotNil(mockTabbarControllerDummy.initialTabBar.getTabBar(), "Deveria ter pegue a tabbar desta viewController")
   }
   
-  // MARK: - Update Values Test
+  func testGetTabBarError() throws {
+    XCTAssertNil(mockTabbarControllerDummy.getTabBar(), "Deveria vir vazio pois não tem tabbar")
+  }
+
+  func testcreateViewsActionInTabBarSuccess() throws {
+    XCTAssertEqual(mockTabbarControllerDummy.initialTabBar.createViewsActionInTabBar(withSelector: #selector(testSelector)).count, 1, "Deveria ter pegue a tabbar desta viewController")
+  }
+
+  func testcreateViewsActionInTabBarError() throws {
+   XCTAssertEqual(mockTabbarControllerDummy.createViewsActionInTabBar(withSelector: #selector(testSelector)).count, 0, "Deveria ter pegue a tabbar desta viewController")
+  }
   
-  func testVerifyDefaultLocation() throws {
-    let defaultValue = voiceAction.speechReconizer?.locale.identifier
-    XCTAssertEqual(defaultValue , "pt-BR")
+ // MARK: - Test NavigationBar -
+
+  func testGetNavigationBarSucess() throws {
+    XCTAssertNotNil(mockNavigationControllerDummy.initialNavBar.getNavigationBar(), "Deveria ter pegue a NavigationBar desta viewController")
+  }
+
+  func testGetNavigationBarError() throws {
+    XCTAssertNil(mockNavigationControllerDummy.getNavigationBar(), "Nao deveria ter uma navigationcontroller")
+  }
+
+  func testGetNavigationBackButtonError() throws {
+    XCTAssertNil(mockNavigationControllerDummy.getNavigationBackButton(), "Deveria vir vazio essa viewController")
+  }
+
+  func testGgetViewActionNavigationAndTabBarSucessWithTab() throws {
+    XCTAssertEqual(mockTabbarControllerDummy.initialTabBar.getViewActionNavigationAndTabBar(withSelectorTabBar: #selector(testSelector), andSelectorNavBar: #selector(testSelector)).count, 1, "Deveria vir Com a action da tabBar")
+  }
+
+
+  func testGgetViewActionNavigationAndTabBarErrorWithTab() throws {
+    XCTAssertEqual(mockTabbarControllerDummy.getViewActionNavigationAndTabBar(withSelectorTabBar: #selector(testSelector), andSelectorNavBar: #selector(testSelector)).count, 0, "Deveria vir sem nenhum action ")
   }
 }

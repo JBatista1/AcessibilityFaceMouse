@@ -10,7 +10,6 @@ import Foundation
 
 class TimerControl: TimerActionProtocol {
 
-  private(set)  var stop: Bool = false
   private var timer: Timer?
   private var secondTimer: Int = 0
   private var runTimer: Int = 0
@@ -22,28 +21,17 @@ class TimerControl: TimerActionProtocol {
     secondTimer = seconds
     timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(finishTimer), userInfo: nil, repeats: true)
   }
-
-  func stopTimer() {
-    stop = true
-  }
-
+  
   // MARK: - Class Methods
 
   @objc private func finishTimer() {
     runTimer += 1
-    verifyIsStop()
     verifyTimerIsFinish(withRunTimer: runTimer)
   }
 
   private func verifyTimerIsFinish(withRunTimer runTimer: Int) {
     if runTimer >= secondTimer {
       delegate?.finishTimer()
-      timer?.invalidate()
-    }
-  }
-  
-  private func verifyIsStop() {
-    if stop {
       timer?.invalidate()
     }
   }

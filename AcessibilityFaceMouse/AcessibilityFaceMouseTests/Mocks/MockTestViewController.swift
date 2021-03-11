@@ -16,10 +16,10 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
   var selectorCalledView: Bool = false
   var selectorCalledbutton: Bool = false
   var selectorCalledUIImage: Bool = false
-
   var selectorDelegateTabbar: Bool = false
-
   var selectedIndex: Int = -1
+  var numberRow: Int = 10
+  var numberSection: Int = 2
 
   // MARK: - Proprety UIView
   let mockView = UIView(frame: CGRect(x: 0, y: 100, width: 200, height: 200))
@@ -27,7 +27,7 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
   let mockTabBar = UITabBar(frame: CGRect(x: 0, y: 500, width: 300, height: 300))
   let mockUiimageViews = UIImageView(frame: CGRect(x: 0, y: 800, width: 200, height: 200))
   let mockButtonTabBar = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-  let mockUITableView = UITableView(frame: CGRect(x: 0, y: 1000, width: 200, height: 200))
+  var mockUITableView = UITableView(frame: CGRect(x: 0, y: 1000, width: 200, height: 200))
   var mockUICollectionView: UICollectionView!
 
   override func viewDidAppear(_ animated: Bool) {}
@@ -83,11 +83,14 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
 
 extension MockTestViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return numberRow
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     return UITableViewCell()
+  }
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return numberSection
   }
 }
 

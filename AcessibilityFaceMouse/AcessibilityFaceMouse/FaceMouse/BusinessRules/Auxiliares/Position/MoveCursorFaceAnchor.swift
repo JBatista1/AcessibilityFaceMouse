@@ -16,7 +16,7 @@ final class MoveCursorFaceAnchor {
   private var lastPercentagem = PercentagemAxis(0, 0)
   private var lastPosition = CGPoint.zero
   private var totalPercentage: CGFloat = 100
-  private var faceSensitivity: FaceSensitivity = FaceSensitivity.getDefault()
+  private (set) var faceSensitivity: FaceSensitivity = FaceSensitivity.getDefault()
 
   // MARK: - Life Cicle
 
@@ -87,9 +87,9 @@ extension MoveCursorFaceAnchor: MoveCursorProtocol {
       percentagemY = getPercentage(withFacePosition: -point.y, andLimitedAxis: faceSensitivity.getLimitedY())
     }
 
-    newPositionCursor.x =  getNewPosition(withPercentage: percentagemX, MovimentDirection: directionX, andMaxValue: Screen.center.x)
+    newPositionCursor.x = getNewPosition(withPercentage: percentagemX, MovimentDirection: directionX, andMaxValue: Screen.center.x)
 
-    newPositionCursor.y =  getNewPosition(withPercentage: percentagemY, MovimentDirection: directionY, andMaxValue: Screen.center.y) 
+    newPositionCursor.y = getNewPosition(withPercentage: percentagemY, MovimentDirection: directionY, andMaxValue: Screen.center.y)
 
     lastPercentagem = (percentagemX, percentagemY)
     lastPosition = newPositionCursor

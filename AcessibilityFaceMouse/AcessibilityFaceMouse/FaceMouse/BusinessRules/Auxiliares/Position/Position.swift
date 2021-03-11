@@ -8,13 +8,17 @@
 
 import UIKit
 
-class Position {
-
-  private let views: [UIView]
+class Position: PositionProtocol {
+  private (set)var views: [UIView]
   private var absolutePosition: [CGRect] = []
   private var absolutePositionTable: [CGRect] = []
 
   init(views: [UIView]) {
+    self.views = views
+    absolutePosition = getAbsolutePosition(inViews: views)
+  }
+
+  func set(theViews views: [UIView]) {
     self.views = views
     absolutePosition = getAbsolutePosition(inViews: views)
   }
@@ -57,7 +61,7 @@ class Position {
     return false
   }
 
-  func getAbsolutePosition(inViews views: [UIView]) -> [CGRect] {
+  private func getAbsolutePosition(inViews views: [UIView]) -> [CGRect] {
     var absolutePosition = [CGRect]()
     for view in views {
       absolutePosition.append(view.absoluteValueToFrame())

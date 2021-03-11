@@ -22,9 +22,9 @@ enum Cursor {
 }
 
 enum ValuesConstants {
-  static let closeEye: CGFloat = 0.2
-  static let openEye: CGFloat = 0.6
-  static let tongue: CGFloat = 0.1
+  static let closeEye: CGFloat = 0.5
+  static let openEye: CGFloat = 0.5
+  static let tongue: CGFloat = 0.2
   static let indexPathError: IndexPath = IndexPath(row: -1, section: -1)
   static let framesPerSecond: Int = 25
   static let tabBarIndexError: Int = -1
@@ -39,6 +39,7 @@ enum ValuesConstants {
   static let actionBack = "voltar"
   static let actionScrollNext = "próximo"
   static let actionScrollBack = "anterior"
+  static let maxPlacesCGFloat = 18
 }
 
 internal enum AccessibilityUIType: String {

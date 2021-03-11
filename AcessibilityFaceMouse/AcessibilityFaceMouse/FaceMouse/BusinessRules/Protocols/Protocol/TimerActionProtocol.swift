@@ -7,6 +7,6 @@
 //
 
 protocol TimerActionProtocol {
+  var delegate: TimerActionResponseProtocol? {get set}
   func startTimer(withTimerSeconds seconds: Int)
-  func stopTimer()
 }

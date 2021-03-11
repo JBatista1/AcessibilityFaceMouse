@@ -1,5 +1,5 @@
 //
-//  SuccessViewController.swift
+//  TableExempleViewController.swift
 //  AcessibilityFaceMovimentBR
 //
 //  Created by Joao Batista on 13/02/21.
@@ -9,13 +9,12 @@
 import UIKit
 import AcessibilityFaceMouse
 
-class SuccessViewController: AccessibilityFaceAnchorViewController {
+class TableExempleViewController: AccessibilityFaceAnchorViewController {
 
   @IBOutlet weak var tableView: UITableView!
   override func viewDidLoad() {
     super.viewDidLoad()
     setDelegates()
-    set(withTableView: tableView)
     voiceAction.initialRecording()
   }
 
@@ -23,6 +22,7 @@ class SuccessViewController: AccessibilityFaceAnchorViewController {
     super.viewDidLayoutSubviews()
     action.set(viewsAction: createViewAction())
   }
+
   
   func setDelegates() {
     delegateNavigationBar = self
@@ -38,7 +38,7 @@ class SuccessViewController: AccessibilityFaceAnchorViewController {
   }
 }
 
-extension SuccessViewController: UITableViewDataSource, UITableViewDelegate {
+extension TableExempleViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 15
   }
@@ -59,14 +59,14 @@ extension SuccessViewController: UITableViewDataSource, UITableViewDelegate {
   }
 }
 
-extension SuccessViewController: CellViewSelectedProtocol {
+extension TableExempleViewController: CellViewSelectedProtocol {
   func cellSelected(withIndex index: IndexPath) {
     title = "Row \(index.row)"
   }
 
 }
 
-extension SuccessViewController: TabBarSelectedProtocol, NavigationBackButtonProtocol, ScrollActionDelegate {
+extension TableExempleViewController: TabBarSelectedProtocol, NavigationBackButtonProtocol, ScrollActionDelegate {
 
   func tabBar(isSelectedIndex index: Int) {
     tabBarController?.selectedIndex = index

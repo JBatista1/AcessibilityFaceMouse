@@ -10,34 +10,35 @@ import UIKit
 
 class ActionInView: NSObject {
 
-  private var viewsAction: [ViewAction] = []
   private var typeStartAction: TypeStartAction
   private var target: UIViewController
-  private var position: Position?
+
   private var pointView: CGPoint = .zero
   private var manageCase = ManagesSpecialCases()
   private var timer = TimerControl()
-  private var isCooldown = false
+  private (set) var position: PositionProtocol?
+  private (set) var isCooldown = false
+  private (set) var viewsAction: [ViewAction] = []
 
-  required init(typeStartAction: TypeStartAction = .voice, target: UIViewController) {
+  required init(typeStartAction: TypeStartAction = .voice, target: UIViewController, position: PositionProtocol? = nil) {
     self.typeStartAction = typeStartAction
     self.target = target
     super.init()
     timer.delegate = self
-    position = nil
+    self.position = position
   }
 
   // MARK: - Private Method
 
   private func calledSelector(inViewAction viewAction: ViewAction) {
     if let identifier = viewAction.view.accessibilityIdentifier {
-      calledSpecialTarge(withIndentifier: identifier, inViewAction: viewAction)
+      calledSpecialTarget(withIndentifier: identifier, inViewAction: viewAction)
     } else {
       self.target.perform(viewAction.selector)
     }
   }
 
-  private func calledSpecialTarge(withIndentifier identifier: String, inViewAction viewAction: ViewAction) {
+  private func calledSpecialTarget(withIndentifier identifier: String, inViewAction viewAction: ViewAction) {
     switch identifier {
     case AccessibilityUIType.uiButton.identifier,
          AccessibilityUIType.uiImageView.identifier,
@@ -59,6 +60,14 @@ class ActionInView: NSObject {
 
   private func verify(theEyeClose eyeClose: CGFloat, andEyeOpen eyeOpen: CGFloat) -> Bool {
     return eyeClose >= ValuesConstants.closeEye && eyeOpen <= ValuesConstants.openEye
+  }
+
+  private func createPosition(withViews views: [UIView]) {
+    if position != nil {
+      position?.set(theViews: views)
+    }else {
+      position = Position(views: views)
+    }
   }
 }
 
@@ -107,7 +116,7 @@ extension ActionInView: ActionProtocol {
       views.append(viewAction.view)
     }
 
-    position = Position(views: views)
+    createPosition(withViews: views)
     self.viewsAction = newViewsAction
   }
 

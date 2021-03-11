@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ActionVoiceCommands {
+public struct ActionVoiceCommands: Equatable {
 
   var action: String
   var backNavigation: String
@@ -31,7 +31,7 @@ public struct ActionVoiceCommands {
     return [action.lowercased(), backNavigation.lowercased(), scrollNext.lowercased(), scrollBack.lowercased()]
   }
 
-  internal func getCommandoEnum(withText text: String ) -> VoiceCommand {
+  internal func getCommandoEnum(withText text: String) -> VoiceCommand {
     switch text.lowercased() {
     case action.lowercased():
       return .action

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct FaceSensitivity {
+public struct FaceSensitivity: Equatable {
 
   public var limitedTopX: CGFloat
   public var limitedBottonX: CGFloat

@@ -14,11 +14,10 @@ extension UIView {
     if let baseWindow = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first {
       return returnAbsoluteValue(basedInWindows: baseWindow)
     }
-    
     return CGRect(x: 0, y: 0, width: 0, height: 0)
   }
 
-  private func returnAbsoluteValue(basedInWindows windows: UIWindow) -> CGRect {
+  func returnAbsoluteValue(basedInWindows windows: UIWindow) -> CGRect {
     guard let absoluteframe = self.superview?.convert(self.frame, to: windows) else {
       return CGRect(x: 0, y: 0, width: 0, height: 0)
     }

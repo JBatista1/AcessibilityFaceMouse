@@ -38,7 +38,7 @@ class CaptureFaceSensibilityViewController: AcessibilityGetSensitivityViewContro
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let barViewControllers = segue.destination as? UITabBarController,
-      let destinationViewController = barViewControllers.viewControllers![0] as? ViewController {
+      let destinationViewController = barViewControllers.viewControllers![0] as? MovimentTestViewController {
       destinationViewController.set(faceSensitivity: faceSensitivity)
     }
   }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9A0A300A25F0370D0013DA6B /* AcessibilityFaceMouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A300025F0370C0013DA6B /* AcessibilityFaceMouse.framework */; };
-		9A0A300F25F0370D0013DA6B /* AcessibilityFaceMouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A300E25F0370D0013DA6B /* AcessibilityFaceMouseTests.swift */; };
 		9A0A301125F0370D0013DA6B /* AcessibilityFaceMouse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A0A300325F0370C0013DA6B /* AcessibilityFaceMouse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A0A305525F037AA0013DA6B /* AcessibilityGetSensitivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A301C25F037A90013DA6B /* AcessibilityGetSensitivityViewController.swift */; };
 		9A0A305625F037AA0013DA6B /* AcessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0A301D25F037A90013DA6B /* AcessibilityViewController.swift */; };
@@ -47,27 +46,46 @@
 		9A35052125F054E700CDCAB2 /* ActionVoiceCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052025F054E700CDCAB2 /* ActionVoiceCommands.swift */; };
 		9A35052325F055DC00CDCAB2 /* VoiceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052225F055DC00CDCAB2 /* VoiceCommand.swift */; };
 		9A35052525F0608000CDCAB2 /* ScrollActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35052425F0608000CDCAB2 /* ScrollActionDelegate.swift */; };
+		9A38994A25F82FFA0059F45E /* VoiceActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38994925F82FFA0059F45E /* VoiceActionTest.swift */; };
+		9A38994C25F8330B0059F45E /* MockVoiceActionSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38994B25F8330B0059F45E /* MockVoiceActionSpy.swift */; };
+		9A3C32A625F83F660025CC50 /* MockManagePointSensibilityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C32A525F83F660025CC50 /* MockManagePointSensibilityDelegate.swift */; };
+		9A3C32A925F84B010025CC50 /* MoveCursorFaceAnchorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C32A825F84B010025CC50 /* MoveCursorFaceAnchorTest.swift */; };
+		9A4C8CB825F83CCA00395D77 /* ViewControllerExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C8CB725F83CCA00395D77 /* ViewControllerExtensionTest.swift */; };
+		9A4C8CBC25F83D7A00395D77 /* ManagePointSensibilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C8CBB25F83D7A00395D77 /* ManagePointSensibilityTest.swift */; };
+		9A7B779625F6E54200D91564 /* MockItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B779525F6E54200D91564 /* MockItemViewController.swift */; };
 		9A8C67D925F041270018F215 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C67D825F041270018F215 /* Assets.swift */; };
+		9A8F88EA25F99987003F32D4 /* UIViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F88E925F99987003F32D4 /* UIViewExtensionTest.swift */; };
+		9AB1AE3525F99F72008E87DB /* UITableViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3425F99F72008E87DB /* UITableViewExtensionTest.swift */; };
+		9AB1AE3925FAD092008E87DB /* CGFloatExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3825FAD092008E87DB /* CGFloatExtensionTest.swift */; };
+		9AB1AE3B25FAD4C4008E87DB /* PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3A25FAD4C4008E87DB /* PositionTests.swift */; };
+		9AB1AE3E25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3D25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift */; };
+		9ABCA9C825F414FB002A700B /* VoiceActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABCA9C725F414FB002A700B /* VoiceActionProtocol.swift */; };
+		9ABEC5B825F56611000C83A7 /* PositionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC5B725F56611000C83A7 /* PositionProtocol.swift */; };
+		9ABEC5BE25F5727C000C83A7 /* MockPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC5BD25F5727C000C83A7 /* MockPosition.swift */; };
+		9AC7529F25F40FFF005345F5 /* ActionInViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7529E25F40FFF005345F5 /* ActionInViewTest.swift */; };
+		9AC752A825F41152005345F5 /* MockTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC752A725F41152005345F5 /* MockTestViewController.swift */; };
 		9AD0861125F03A6200120C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0861025F03A6200120C80 /* AppDelegate.swift */; };
 		9AD0861325F03A6200120C80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0861225F03A6200120C80 /* SceneDelegate.swift */; };
 		9AD0861A25F03A6400120C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AD0861925F03A6400120C80 /* Assets.xcassets */; };
 		9AD0861D25F03A6400120C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD0861B25F03A6400120C80 /* LaunchScreen.storyboard */; };
 		9AD0862825F03A6400120C80 /* ExemplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD0862725F03A6400120C80 /* ExemplesTests.swift */; };
 		9AD0863225F03B7D00120C80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD0863025F03B7D00120C80 /* Main.storyboard */; };
-		9AD6F36E25F3F5010051A716 /* VoiceActionActiveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6F36D25F3F5010051A716 /* VoiceActionActiveProtocol.swift */; };
+		9AD6F36E25F3F5010051A716 /* VoiceActionCommandProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6F36D25F3F5010051A716 /* VoiceActionCommandProtocol.swift */; };
 		9AD6F37025F3F5780051A716 /* TimerActionResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6F36F25F3F5780051A716 /* TimerActionResponseProtocol.swift */; };
+		9ADFC1CA25F975A500FD4CE5 /* MockTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFC1C925F975A500FD4CE5 /* MockTabBarController.swift */; };
+		9ADFC1CC25F97C6100FD4CE5 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFC1CB25F97C6100FD4CE5 /* MockNavigationController.swift */; };
 		9AE6F27F25F03D8400AB219B /* NavigationTesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F27B25F03D8300AB219B /* NavigationTesteViewController.swift */; };
 		9AE6F28025F03D8400AB219B /* CollectionTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F27C25F03D8300AB219B /* CollectionTestViewController.swift */; };
 		9AE6F28125F03D8400AB219B /* CaptureFaceSensibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F27D25F03D8300AB219B /* CaptureFaceSensibilityViewController.swift */; };
-		9AE6F28225F03D8400AB219B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F27E25F03D8300AB219B /* ViewController.swift */; };
+		9AE6F28225F03D8400AB219B /* MovimentTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F27E25F03D8300AB219B /* MovimentTestViewController.swift */; };
 		9AE6F28625F03D9100AB219B /* CellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F28425F03D9100AB219B /* CellCollectionViewCell.swift */; };
-		9AE6F28725F03D9100AB219B /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F28525F03D9100AB219B /* SuccessViewController.swift */; };
+		9AE6F28725F03D9100AB219B /* TableExempleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6F28525F03D9100AB219B /* TableExempleViewController.swift */; };
 		9AE6F28925F03DB800AB219B /* AcessibilityFaceMouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A300025F0370C0013DA6B /* AcessibilityFaceMouse.framework */; };
 		9AE6F28A25F03DB800AB219B /* AcessibilityFaceMouse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0A300025F0370C0013DA6B /* AcessibilityFaceMouse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9A0A300B25F0370D0013DA6B /* PBXContainerItemProxy */ = {
+		9ABEC5BB25F571BF000C83A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A0A2FF725F0370C0013DA6B /* Project object */;
 			proxyType = 1;
@@ -109,7 +127,6 @@
 		9A0A300325F0370C0013DA6B /* AcessibilityFaceMouse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcessibilityFaceMouse.h; sourceTree = "<group>"; };
 		9A0A300425F0370C0013DA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A0A300925F0370D0013DA6B /* AcessibilityFaceMouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcessibilityFaceMouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A0A300E25F0370D0013DA6B /* AcessibilityFaceMouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessibilityFaceMouseTests.swift; sourceTree = "<group>"; };
 		9A0A301025F0370D0013DA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A0A301C25F037A90013DA6B /* AcessibilityGetSensitivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcessibilityGetSensitivityViewController.swift; sourceTree = "<group>"; };
 		9A0A301D25F037A90013DA6B /* AcessibilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcessibilityViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +165,24 @@
 		9A35052025F054E700CDCAB2 /* ActionVoiceCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionVoiceCommands.swift; sourceTree = "<group>"; };
 		9A35052225F055DC00CDCAB2 /* VoiceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCommand.swift; sourceTree = "<group>"; };
 		9A35052425F0608000CDCAB2 /* ScrollActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollActionDelegate.swift; sourceTree = "<group>"; };
+		9A38994925F82FFA0059F45E /* VoiceActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActionTest.swift; sourceTree = "<group>"; };
+		9A38994B25F8330B0059F45E /* MockVoiceActionSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVoiceActionSpy.swift; sourceTree = "<group>"; };
+		9A3C32A525F83F660025CC50 /* MockManagePointSensibilityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockManagePointSensibilityDelegate.swift; sourceTree = "<group>"; };
+		9A3C32A825F84B010025CC50 /* MoveCursorFaceAnchorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveCursorFaceAnchorTest.swift; sourceTree = "<group>"; };
+		9A4C8CB725F83CCA00395D77 /* ViewControllerExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensionTest.swift; sourceTree = "<group>"; };
+		9A4C8CBB25F83D7A00395D77 /* ManagePointSensibilityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagePointSensibilityTest.swift; sourceTree = "<group>"; };
+		9A7B779525F6E54200D91564 /* MockItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockItemViewController.swift; sourceTree = "<group>"; };
 		9A8C67D825F041270018F215 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		9A8F88E925F99987003F32D4 /* UIViewExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTest.swift; sourceTree = "<group>"; };
+		9AB1AE3425F99F72008E87DB /* UITableViewExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensionTest.swift; sourceTree = "<group>"; };
+		9AB1AE3825FAD092008E87DB /* CGFloatExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensionTest.swift; sourceTree = "<group>"; };
+		9AB1AE3A25FAD4C4008E87DB /* PositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTests.swift; sourceTree = "<group>"; };
+		9AB1AE3D25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionVoiceCommandsTests.swift; sourceTree = "<group>"; };
+		9ABCA9C725F414FB002A700B /* VoiceActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActionProtocol.swift; sourceTree = "<group>"; };
+		9ABEC5B725F56611000C83A7 /* PositionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionProtocol.swift; sourceTree = "<group>"; };
+		9ABEC5BD25F5727C000C83A7 /* MockPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPosition.swift; sourceTree = "<group>"; };
+		9AC7529E25F40FFF005345F5 /* ActionInViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionInViewTest.swift; sourceTree = "<group>"; };
+		9AC752A725F41152005345F5 /* MockTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTestViewController.swift; sourceTree = "<group>"; };
 		9AD0860E25F03A6200120C80 /* Exemples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exemples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD0861025F03A6200120C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AD0861225F03A6200120C80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,14 +193,16 @@
 		9AD0862725F03A6400120C80 /* ExemplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExemplesTests.swift; sourceTree = "<group>"; };
 		9AD0862925F03A6400120C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD0863125F03B7D00120C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9AD6F36D25F3F5010051A716 /* VoiceActionActiveProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActionActiveProtocol.swift; sourceTree = "<group>"; };
+		9AD6F36D25F3F5010051A716 /* VoiceActionCommandProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActionCommandProtocol.swift; sourceTree = "<group>"; };
 		9AD6F36F25F3F5780051A716 /* TimerActionResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActionResponseProtocol.swift; sourceTree = "<group>"; };
+		9ADFC1C925F975A500FD4CE5 /* MockTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTabBarController.swift; sourceTree = "<group>"; };
+		9ADFC1CB25F97C6100FD4CE5 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		9AE6F27B25F03D8300AB219B /* NavigationTesteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTesteViewController.swift; sourceTree = "<group>"; };
 		9AE6F27C25F03D8300AB219B /* CollectionTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTestViewController.swift; sourceTree = "<group>"; };
 		9AE6F27D25F03D8300AB219B /* CaptureFaceSensibilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureFaceSensibilityViewController.swift; sourceTree = "<group>"; };
-		9AE6F27E25F03D8300AB219B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9AE6F27E25F03D8300AB219B /* MovimentTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovimentTestViewController.swift; sourceTree = "<group>"; };
 		9AE6F28425F03D9100AB219B /* CellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCollectionViewCell.swift; sourceTree = "<group>"; };
-		9AE6F28525F03D9100AB219B /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		9AE6F28525F03D9100AB219B /* TableExempleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableExempleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +265,6 @@
 		9A0A300225F0370C0013DA6B /* AcessibilityFaceMouse */ = {
 			isa = PBXGroup;
 			children = (
-				9A0A308025F037DA0013DA6B /* SupportFiles */,
 				9A0A301A25F037A90013DA6B /* FaceMouse */,
 				9A0A305125F037AA0013DA6B /* Resources */,
 				9A0A300325F0370C0013DA6B /* AcessibilityFaceMouse.h */,
@@ -241,7 +276,10 @@
 		9A0A300D25F0370D0013DA6B /* AcessibilityFaceMouseTests */ = {
 			isa = PBXGroup;
 			children = (
-				9A0A300E25F0370D0013DA6B /* AcessibilityFaceMouseTests.swift */,
+				9A4C8CBA25F83D1100395D77 /* Extensions */,
+				9A4C8CB625F83C8100395D77 /* Auxiliares */,
+				9A7B779225F6D47200D91564 /* Utils */,
+				9AC752A025F410D5005345F5 /* Mocks */,
 				9A0A301025F0370D0013DA6B /* Info.plist */,
 			);
 			path = AcessibilityFaceMouseTests;
@@ -259,9 +297,9 @@
 		9A0A301B25F037A90013DA6B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9A0A301C25F037A90013DA6B /* AcessibilityGetSensitivityViewController.swift */,
-				9A0A301D25F037A90013DA6B /* AcessibilityViewController.swift */,
-				9A0A301E25F037A90013DA6B /* AccessibilityFaceAnchorViewController.swift */,
+				9AC7529625F40EB3005345F5 /* AcessibilityGetSensitivity */,
+				9AC7529525F40E92005345F5 /* Acessibility */,
+				9AC7529425F40E87005345F5 /* AccessibilityFaceAnchor */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -270,11 +308,11 @@
 			isa = PBXGroup;
 			children = (
 				9AE6F28325F03D9100AB219B /* Cel */,
-				9AE6F28525F03D9100AB219B /* SuccessViewController.swift */,
+				9AE6F28525F03D9100AB219B /* TableExempleViewController.swift */,
 				9AE6F27D25F03D8300AB219B /* CaptureFaceSensibilityViewController.swift */,
 				9AE6F27C25F03D8300AB219B /* CollectionTestViewController.swift */,
 				9AE6F27B25F03D8300AB219B /* NavigationTesteViewController.swift */,
-				9AE6F27E25F03D8300AB219B /* ViewController.swift */,
+				9AE6F27E25F03D8300AB219B /* MovimentTestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -364,11 +402,50 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9A0A308025F037DA0013DA6B /* SupportFiles */ = {
+		9A3C32A725F84AEE0025CC50 /* Position */ = {
+			isa = PBXGroup;
+			children = (
+				9A3C32A825F84B010025CC50 /* MoveCursorFaceAnchorTest.swift */,
+				9A8F88E925F99987003F32D4 /* UIViewExtensionTest.swift */,
+				9AB1AE3A25FAD4C4008E87DB /* PositionTests.swift */,
+			);
+			path = Position;
+			sourceTree = "<group>";
+		};
+		9A4C8CB625F83C8100395D77 /* Auxiliares */ = {
+			isa = PBXGroup;
+			children = (
+				9AB1AE3C25FAD6E2008E87DB /* Models */,
+				9A3C32A725F84AEE0025CC50 /* Position */,
+				9A4C8CB925F83D0800395D77 /* Manages */,
+				9AC7529D25F40FC9005345F5 /* ActionsDetectTest */,
+			);
+			path = Auxiliares;
+			sourceTree = "<group>";
+		};
+		9A4C8CB925F83D0800395D77 /* Manages */ = {
+			isa = PBXGroup;
+			children = (
+				9A4C8CBB25F83D7A00395D77 /* ManagePointSensibilityTest.swift */,
+			);
+			path = Manages;
+			sourceTree = "<group>";
+		};
+		9A4C8CBA25F83D1100395D77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A4C8CB725F83CCA00395D77 /* ViewControllerExtensionTest.swift */,
+				9AB1AE3425F99F72008E87DB /* UITableViewExtensionTest.swift */,
+				9AB1AE3825FAD092008E87DB /* CGFloatExtensionTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9A7B779225F6D47200D91564 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = SupportFiles;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9A8C67D425F040C20018F215 /* Utils */ = {
@@ -382,6 +459,7 @@
 		9A8C67DA25F044F10018F215 /* DelegatesResponse */ = {
 			isa = PBXGroup;
 			children = (
+				9AD6F36D25F3F5010051A716 /* VoiceActionCommandProtocol.swift */,
 				9A0A304825F037AA0013DA6B /* VoiceActionResponseProtocol.swift */,
 				9A35052425F0608000CDCAB2 /* ScrollActionDelegate.swift */,
 				9AD6F36F25F3F5780051A716 /* TimerActionResponseProtocol.swift */,
@@ -400,7 +478,8 @@
 				9A0A304B25F037AA0013DA6B /* GetSensitivityProtocol.swift */,
 				9A0A304A25F037AA0013DA6B /* CellViewSelectedProtocol.swift */,
 				9A0A304925F037AA0013DA6B /* ManagerPointSesibilittyProtocol.swift */,
-				9AD6F36D25F3F5010051A716 /* VoiceActionActiveProtocol.swift */,
+				9ABCA9C725F414FB002A700B /* VoiceActionProtocol.swift */,
+				9ABEC5B725F56611000C83A7 /* PositionProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -438,6 +517,61 @@
 				9A0A303F25F037A90013DA6B /* TimerControl.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		9AB1AE3C25FAD6E2008E87DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9AB1AE3D25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9AC7529425F40E87005345F5 /* AccessibilityFaceAnchor */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A301E25F037A90013DA6B /* AccessibilityFaceAnchorViewController.swift */,
+			);
+			path = AccessibilityFaceAnchor;
+			sourceTree = "<group>";
+		};
+		9AC7529525F40E92005345F5 /* Acessibility */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A301D25F037A90013DA6B /* AcessibilityViewController.swift */,
+			);
+			path = Acessibility;
+			sourceTree = "<group>";
+		};
+		9AC7529625F40EB3005345F5 /* AcessibilityGetSensitivity */ = {
+			isa = PBXGroup;
+			children = (
+				9A0A301C25F037A90013DA6B /* AcessibilityGetSensitivityViewController.swift */,
+			);
+			path = AcessibilityGetSensitivity;
+			sourceTree = "<group>";
+		};
+		9AC7529D25F40FC9005345F5 /* ActionsDetectTest */ = {
+			isa = PBXGroup;
+			children = (
+				9AC7529E25F40FFF005345F5 /* ActionInViewTest.swift */,
+				9A38994925F82FFA0059F45E /* VoiceActionTest.swift */,
+			);
+			path = ActionsDetectTest;
+			sourceTree = "<group>";
+		};
+		9AC752A025F410D5005345F5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9AC752A725F41152005345F5 /* MockTestViewController.swift */,
+				9ABEC5BD25F5727C000C83A7 /* MockPosition.swift */,
+				9A7B779525F6E54200D91564 /* MockItemViewController.swift */,
+				9A38994B25F8330B0059F45E /* MockVoiceActionSpy.swift */,
+				9A3C32A525F83F660025CC50 /* MockManagePointSensibilityDelegate.swift */,
+				9ADFC1C925F975A500FD4CE5 /* MockTabBarController.swift */,
+				9ADFC1CB25F97C6100FD4CE5 /* MockNavigationController.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		9AD0860F25F03A6200120C80 /* Exemples */ = {
@@ -522,7 +656,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9A0A300C25F0370D0013DA6B /* PBXTargetDependency */,
+				9ABEC5BC25F571BF000C83A7 /* PBXTargetDependency */,
 			);
 			name = AcessibilityFaceMouseTests;
 			productName = AcessibilityFaceMouseTests;
@@ -660,6 +794,7 @@
 				9A0A305F25F037AA0013DA6B /* UIViewControllerExtension.swift in Sources */,
 				9A0A306125F037AA0013DA6B /* UITableViewExtension.swift in Sources */,
 				9A0A307425F037AA0013DA6B /* Position.swift in Sources */,
+				9ABEC5B825F56611000C83A7 /* PositionProtocol.swift in Sources */,
 				9A0A307D25F037AA0013DA6B /* ActionProtocol.swift in Sources */,
 				9A0A307625F037AA0013DA6B /* ManagerPointSesibilittyProtocol.swift in Sources */,
 				9A0A305525F037AA0013DA6B /* AcessibilityGetSensitivityViewController.swift in Sources */,
@@ -675,7 +810,7 @@
 				9A0A306825F037AA0013DA6B /* Direction.swift in Sources */,
 				9A0A307525F037AA0013DA6B /* VoiceActionResponseProtocol.swift in Sources */,
 				9A0A307125F037AA0013DA6B /* VoiceAction.swift in Sources */,
-				9AD6F36E25F3F5010051A716 /* VoiceActionActiveProtocol.swift in Sources */,
+				9AD6F36E25F3F5010051A716 /* VoiceActionCommandProtocol.swift in Sources */,
 				9A0A306E25F037AA0013DA6B /* ManagePointSensibility.swift in Sources */,
 				9A0A306925F037AA0013DA6B /* Constants.swift in Sources */,
 				9A0A306C25F037AA0013DA6B /* FaceSensitivity.swift in Sources */,
@@ -683,6 +818,7 @@
 				9A0A306725F037AA0013DA6B /* MovimentDirection.swift in Sources */,
 				9A0A306B25F037AA0013DA6B /* ViewAction.swift in Sources */,
 				9A0A307A25F037AA0013DA6B /* TabBarSelectedProtocol.swift in Sources */,
+				9ABCA9C825F414FB002A700B /* VoiceActionProtocol.swift in Sources */,
 				9A0A307C25F037AA0013DA6B /* TimerActionProtocol.swift in Sources */,
 				9A0A307825F037AA0013DA6B /* GetSensitivityProtocol.swift in Sources */,
 				9A0A305725F037AA0013DA6B /* AccessibilityFaceAnchorViewController.swift in Sources */,
@@ -697,7 +833,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A0A300F25F0370D0013DA6B /* AcessibilityFaceMouseTests.swift in Sources */,
+				9A3C32A925F84B010025CC50 /* MoveCursorFaceAnchorTest.swift in Sources */,
+				9AB1AE3925FAD092008E87DB /* CGFloatExtensionTest.swift in Sources */,
+				9A3C32A625F83F660025CC50 /* MockManagePointSensibilityDelegate.swift in Sources */,
+				9AC752A825F41152005345F5 /* MockTestViewController.swift in Sources */,
+				9AB1AE3E25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift in Sources */,
+				9AB1AE3525F99F72008E87DB /* UITableViewExtensionTest.swift in Sources */,
+				9A4C8CB825F83CCA00395D77 /* ViewControllerExtensionTest.swift in Sources */,
+				9AB1AE3B25FAD4C4008E87DB /* PositionTests.swift in Sources */,
+				9A4C8CBC25F83D7A00395D77 /* ManagePointSensibilityTest.swift in Sources */,
+				9ADFC1CA25F975A500FD4CE5 /* MockTabBarController.swift in Sources */,
+				9A7B779625F6E54200D91564 /* MockItemViewController.swift in Sources */,
+				9A38994C25F8330B0059F45E /* MockVoiceActionSpy.swift in Sources */,
+				9A38994A25F82FFA0059F45E /* VoiceActionTest.swift in Sources */,
+				9ABEC5BE25F5727C000C83A7 /* MockPosition.swift in Sources */,
+				9A8F88EA25F99987003F32D4 /* UIViewExtensionTest.swift in Sources */,
+				9AC7529F25F40FFF005345F5 /* ActionInViewTest.swift in Sources */,
+				9ADFC1CC25F97C6100FD4CE5 /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,13 +857,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE6F28225F03D8400AB219B /* ViewController.swift in Sources */,
+				9AE6F28225F03D8400AB219B /* MovimentTestViewController.swift in Sources */,
 				9AE6F28625F03D9100AB219B /* CellCollectionViewCell.swift in Sources */,
 				9AE6F28025F03D8400AB219B /* CollectionTestViewController.swift in Sources */,
 				9AE6F27F25F03D8400AB219B /* NavigationTesteViewController.swift in Sources */,
 				9AD0861125F03A6200120C80 /* AppDelegate.swift in Sources */,
 				9AD0861325F03A6200120C80 /* SceneDelegate.swift in Sources */,
-				9AE6F28725F03D9100AB219B /* SuccessViewController.swift in Sources */,
+				9AE6F28725F03D9100AB219B /* TableExempleViewController.swift in Sources */,
 				9AE6F28125F03D8400AB219B /* CaptureFaceSensibilityViewController.swift in Sources */,
 				9A8C67D925F041270018F215 /* Assets.swift in Sources */,
 			);
@@ -728,10 +880,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9A0A300C25F0370D0013DA6B /* PBXTargetDependency */ = {
+		9ABEC5BC25F571BF000C83A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9A0A2FFF25F0370C0013DA6B /* AcessibilityFaceMouse */;
-			targetProxy = 9A0A300B25F0370D0013DA6B /* PBXContainerItemProxy */;
+			targetProxy = 9ABEC5BB25F571BF000C83A7 /* PBXContainerItemProxy */;
 		};
 		9AD0862525F03A6400120C80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

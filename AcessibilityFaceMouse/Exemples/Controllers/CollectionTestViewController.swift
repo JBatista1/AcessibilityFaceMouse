@@ -42,7 +42,6 @@ class CollectionTestViewController: AccessibilityFaceAnchorViewController {
   
   @objc func handleTap(_ sender: Any? = nil) {
     guard let index = sender as? IndexPath else { return }
-    print(index)
   }
 }
 
@@ -62,7 +61,6 @@ extension CollectionTestViewController: UICollectionViewDelegate, UICollectionVi
 
 extension CollectionTestViewController: CellViewSelectedProtocol {
   func cellSelected(withIndex index: IndexPath) {
-    print(index)
   }
 }
 
@@ -75,7 +73,6 @@ extension CollectionTestViewController: TabBarSelectedProtocol {
 
 extension CollectionTestViewController: ScrollActionDelegate {
   func scrollNext() {
-    print("CalleS")
     collectionView.nextCell()
   }
 

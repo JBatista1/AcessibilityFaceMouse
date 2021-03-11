@@ -12,9 +12,14 @@ public extension UICollectionView {
 
   func getCell() -> [UICollectionViewCell] {
     var cells = [UICollectionViewCell]()
+
+    if self.numberOfSections == 0 || (self.numberOfSections == 1 && self.numberOfItems(inSection: 0) == 0) || self.numberOfItems(inSection: 0) == 0 {
+      return []
+    }
+
     for section in 0...(self.numberOfSections-1) {
-      for item in 0...(self.self.numberOfItems(inSection: section)-1) {
-        if let cell = self.cellForItem(at: IndexPath(row: item, section: section)) {
+      for item in 0...(self.numberOfItems(inSection: section)-1) {
+        if let cell = self.cellForItem(at: IndexPath(item: item, section: section)) {
           cells.append(cell)
           cell.accessibilityElements = [IndexPath(item: item, section: section)]
         }

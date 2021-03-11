@@ -61,6 +61,8 @@ extension CollectionTestViewController: UICollectionViewDelegate, UICollectionVi
 
 extension CollectionTestViewController: CellViewSelectedProtocol {
   func cellSelected(withIndex index: IndexPath) {
+    let titleItem = "Item \(index)"
+    print(titleItem)
   }
 }
 

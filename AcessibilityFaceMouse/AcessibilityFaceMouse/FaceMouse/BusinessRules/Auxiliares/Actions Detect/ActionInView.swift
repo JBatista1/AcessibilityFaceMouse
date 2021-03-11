@@ -20,7 +20,7 @@ class ActionInView: NSObject {
   private (set) var isCooldown = false
   private (set) var viewsAction: [ViewAction] = []
 
-  required init(typeStartAction: TypeStartAction = .voice, target: UIViewController, position: PositionProtocol? = nil) {
+  required init(typeStartAction: TypeStartAction = .tongue, target: UIViewController, position: PositionProtocol? = nil) {
     self.typeStartAction = typeStartAction
     self.target = target
     super.init()

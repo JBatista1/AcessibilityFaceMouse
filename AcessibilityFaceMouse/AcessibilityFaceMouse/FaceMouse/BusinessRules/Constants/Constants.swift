@@ -39,6 +39,7 @@ enum ValuesConstants {
   static let actionBack = "voltar"
   static let actionScrollNext = "próximo"
   static let actionScrollBack = "anterior"
+  static let maxPlacesCGFloat = 18
 }
 
 internal enum AccessibilityUIType: String {

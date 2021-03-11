@@ -13,7 +13,6 @@ import UIKit
 class UIViewExtensionTest: XCTestCase {
 
   let window = UIWindow(frame: UIScreen.main.bounds)
-
   override func setUpWithError() throws {
 
   }

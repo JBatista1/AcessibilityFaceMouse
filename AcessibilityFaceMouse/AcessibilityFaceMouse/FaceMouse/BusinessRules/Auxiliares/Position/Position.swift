@@ -9,7 +9,7 @@
 import UIKit
 
 class Position: PositionProtocol {
-  private var views: [UIView]
+  private (set)var views: [UIView]
   private var absolutePosition: [CGRect] = []
   private var absolutePositionTable: [CGRect] = []
 

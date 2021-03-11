@@ -56,6 +56,9 @@
 		9A8C67D925F041270018F215 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8C67D825F041270018F215 /* Assets.swift */; };
 		9A8F88EA25F99987003F32D4 /* UIViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F88E925F99987003F32D4 /* UIViewExtensionTest.swift */; };
 		9AB1AE3525F99F72008E87DB /* UITableViewExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3425F99F72008E87DB /* UITableViewExtensionTest.swift */; };
+		9AB1AE3925FAD092008E87DB /* CGFloatExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3825FAD092008E87DB /* CGFloatExtensionTest.swift */; };
+		9AB1AE3B25FAD4C4008E87DB /* PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3A25FAD4C4008E87DB /* PositionTests.swift */; };
+		9AB1AE3E25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1AE3D25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift */; };
 		9ABCA9C825F414FB002A700B /* VoiceActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABCA9C725F414FB002A700B /* VoiceActionProtocol.swift */; };
 		9ABEC5B825F56611000C83A7 /* PositionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC5B725F56611000C83A7 /* PositionProtocol.swift */; };
 		9ABEC5BE25F5727C000C83A7 /* MockPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEC5BD25F5727C000C83A7 /* MockPosition.swift */; };
@@ -172,6 +175,9 @@
 		9A8C67D825F041270018F215 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9A8F88E925F99987003F32D4 /* UIViewExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTest.swift; sourceTree = "<group>"; };
 		9AB1AE3425F99F72008E87DB /* UITableViewExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensionTest.swift; sourceTree = "<group>"; };
+		9AB1AE3825FAD092008E87DB /* CGFloatExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensionTest.swift; sourceTree = "<group>"; };
+		9AB1AE3A25FAD4C4008E87DB /* PositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTests.swift; sourceTree = "<group>"; };
+		9AB1AE3D25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionVoiceCommandsTests.swift; sourceTree = "<group>"; };
 		9ABCA9C725F414FB002A700B /* VoiceActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceActionProtocol.swift; sourceTree = "<group>"; };
 		9ABEC5B725F56611000C83A7 /* PositionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionProtocol.swift; sourceTree = "<group>"; };
 		9ABEC5BD25F5727C000C83A7 /* MockPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPosition.swift; sourceTree = "<group>"; };
@@ -401,6 +407,7 @@
 			children = (
 				9A3C32A825F84B010025CC50 /* MoveCursorFaceAnchorTest.swift */,
 				9A8F88E925F99987003F32D4 /* UIViewExtensionTest.swift */,
+				9AB1AE3A25FAD4C4008E87DB /* PositionTests.swift */,
 			);
 			path = Position;
 			sourceTree = "<group>";
@@ -408,6 +415,7 @@
 		9A4C8CB625F83C8100395D77 /* Auxiliares */ = {
 			isa = PBXGroup;
 			children = (
+				9AB1AE3C25FAD6E2008E87DB /* Models */,
 				9A3C32A725F84AEE0025CC50 /* Position */,
 				9A4C8CB925F83D0800395D77 /* Manages */,
 				9AC7529D25F40FC9005345F5 /* ActionsDetectTest */,
@@ -428,6 +436,7 @@
 			children = (
 				9A4C8CB725F83CCA00395D77 /* ViewControllerExtensionTest.swift */,
 				9AB1AE3425F99F72008E87DB /* UITableViewExtensionTest.swift */,
+				9AB1AE3825FAD092008E87DB /* CGFloatExtensionTest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,6 +517,14 @@
 				9A0A303F25F037A90013DA6B /* TimerControl.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		9AB1AE3C25FAD6E2008E87DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9AB1AE3D25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9AC7529425F40E87005345F5 /* AccessibilityFaceAnchor */ = {
@@ -817,10 +834,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A3C32A925F84B010025CC50 /* MoveCursorFaceAnchorTest.swift in Sources */,
+				9AB1AE3925FAD092008E87DB /* CGFloatExtensionTest.swift in Sources */,
 				9A3C32A625F83F660025CC50 /* MockManagePointSensibilityDelegate.swift in Sources */,
 				9AC752A825F41152005345F5 /* MockTestViewController.swift in Sources */,
+				9AB1AE3E25FAD6ED008E87DB /* ActionVoiceCommandsTests.swift in Sources */,
 				9AB1AE3525F99F72008E87DB /* UITableViewExtensionTest.swift in Sources */,
 				9A4C8CB825F83CCA00395D77 /* ViewControllerExtensionTest.swift in Sources */,
+				9AB1AE3B25FAD4C4008E87DB /* PositionTests.swift in Sources */,
 				9A4C8CBC25F83D7A00395D77 /* ManagePointSensibilityTest.swift in Sources */,
 				9ADFC1CA25F975A500FD4CE5 /* MockTabBarController.swift in Sources */,
 				9A7B779625F6E54200D91564 /* MockItemViewController.swift in Sources */,

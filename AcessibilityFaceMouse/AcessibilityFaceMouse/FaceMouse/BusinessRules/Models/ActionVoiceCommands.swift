@@ -31,7 +31,7 @@ public struct ActionVoiceCommands: Equatable {
     return [action.lowercased(), backNavigation.lowercased(), scrollNext.lowercased(), scrollBack.lowercased()]
   }
 
-  internal func getCommandoEnum(withText text: String ) -> VoiceCommand {
+  internal func getCommandoEnum(withText text: String) -> VoiceCommand {
     switch text.lowercased() {
     case action.lowercased():
       return .action

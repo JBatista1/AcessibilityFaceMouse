@@ -19,7 +19,7 @@ public extension UICollectionView {
 
     for section in 0...(self.numberOfSections-1) {
       for item in 0...(self.numberOfItems(inSection: section)-1) {
-        if let cell = self.cellForItem(at: IndexPath(row: item, section: section)) {
+        if let cell = self.cellForItem(at: IndexPath(item: item, section: section)) {
           cells.append(cell)
           cell.accessibilityElements = [IndexPath(item: item, section: section)]
         }

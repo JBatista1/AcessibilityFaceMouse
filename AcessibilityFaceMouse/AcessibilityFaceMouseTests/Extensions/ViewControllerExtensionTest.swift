@@ -23,7 +23,7 @@ class ViewControllerExtensionTest: XCTestCase {
     mockTabbarControllerDummy.endAppearanceTransition()
     mockTabbarControllerDummy.viewWillAppear(true)
 
-     //MARK: - Setup NavigationBar
+    // MARK: - Setup NavigationBar
 
     mockNavigationControllerDummy.beginAppearanceTransition(true, animated: false)
     mockNavigationControllerDummy.endAppearanceTransition()

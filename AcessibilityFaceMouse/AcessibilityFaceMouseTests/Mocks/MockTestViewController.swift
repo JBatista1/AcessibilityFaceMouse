@@ -35,9 +35,11 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let layout = UICollectionViewFlowLayout()
+    
     mockUICollectionView = UICollectionView(frame: CGRect(x: 0, y: 1200, width: 200, height: 200), collectionViewLayout: layout)
     insertViews()
     mockUITableView.dataSource = self
+    mockUICollectionView.dataSource = self
   }
 
   func insertViews() {
@@ -45,6 +47,7 @@ class MockTestViewController: AccessibilityFaceAnchorViewController {
     view.addSubview(mockView)
     view.addSubview(mockButton)
     view.addSubview(mockUiimageViews)
+    view.addSubview(mockUICollectionView)
     mockTabBar.items = [mockButtonTabBar]
   }
 
@@ -94,3 +97,17 @@ extension MockTestViewController: UITableViewDataSource {
   }
 }
 
+extension MockTestViewController: UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    numberRow
+  }
+
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    return UICollectionViewCell()
+  }
+  
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    numberSection
+  }
+
+}

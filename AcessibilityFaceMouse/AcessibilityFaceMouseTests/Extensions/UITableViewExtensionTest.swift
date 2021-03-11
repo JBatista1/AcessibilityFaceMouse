@@ -133,6 +133,4 @@ class UITableViewExtensionTest: XCTestCase {
     rowVisible?.row += 1
     XCTAssertEqual(rowVisible, viewControllerDummy.mockUITableView.indexPathsForVisibleRows?.last, "A celula deveria retornar 0.0")
   }
-
-
 }

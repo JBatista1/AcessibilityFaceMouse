@@ -43,25 +43,25 @@ class MoveCursorFaceAnchorTest: XCTestCase {
   func testGetNextPositionTop() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: 0.0, y: 1.0))
-    XCTAssertEqual(newValue, CGPoint(x: 207, y: 672.0))
+    XCTAssertEqual(newValue, CGPoint(x: 187.5, y: 500.25))
   }
 
   func testGetNextPositionBotton() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: 0.0, y: -1.0))
-    XCTAssertEqual(newValue, CGPoint(x: 207, y: 224.0))
+    XCTAssertEqual(newValue, CGPoint(x: 187.5, y: 166.75))
   }
 
   func testGetNextPositionLeft() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: -1.0, y: 0.0))
-    XCTAssertEqual(newValue, CGPoint(x: 103.5, y: 448.0))
+    XCTAssertEqual(newValue, CGPoint(x: 93.75, y: 333.5))
   }
 
   func testGetNextPositionRight() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: 1.0, y: 0.0))
-    XCTAssertEqual(newValue, CGPoint(x: 310.5, y: 448.0))
+    XCTAssertEqual(newValue, CGPoint(x: 281.25, y: 333.5))
   }
 
   // MARK: - Over value limited max and min
@@ -69,24 +69,24 @@ class MoveCursorFaceAnchorTest: XCTestCase {
   func testOverMaxValueX() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: 6.0, y: 0.0))
-    XCTAssertEqual(newValue, CGPoint(x: UIScreen.main.bounds.width, y: 448.0))
+    XCTAssertEqual(newValue, CGPoint(x: UIScreen.main.bounds.width, y: 333.5))
   }
 
   func testOverMaxValueY() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: 0.0, y: 6.0))
-    XCTAssertEqual(newValue, CGPoint(x: 207, y: UIScreen.main.bounds.height))
+    XCTAssertEqual(newValue, CGPoint(x: 187.5, y: UIScreen.main.bounds.height))
   }
   func testOverMinValueX() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: -6.0, y: 0.0))
-    XCTAssertEqual(newValue, CGPoint(x:0, y: 448.0))
+    XCTAssertEqual(newValue, CGPoint(x:0, y: 333.5))
   }
 
   func testOverMinValueY() throws {
     moveCursorSut.set(faceSensitivity: sensitivityDefault)
     let newValue = moveCursorSut.getNextPosition(withPoint: CGPoint(x: 0.0, y: -6.0))
-    XCTAssertEqual(newValue, CGPoint(x: 207, y: 0))
+    XCTAssertEqual(newValue, CGPoint(x: 187.5, y: 0))
   }
 
 

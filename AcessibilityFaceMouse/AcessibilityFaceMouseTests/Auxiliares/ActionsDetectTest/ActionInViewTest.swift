@@ -42,7 +42,7 @@ class ActionInViewTests: XCTestCase {
 
   func testGetTypeActionDefault() throws {
     let actualType = actionView.getType()
-    XCTAssertEqual(TypeStartAction.voice, actualType, "O tipo padrão foi modificado")
+    XCTAssertEqual(TypeStartAction.tongue, actualType, "O tipo padrão foi modificado")
   }
 
   func testUpdateTypeActionDefault() throws {

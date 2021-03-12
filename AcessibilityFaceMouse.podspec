@@ -47,7 +47,7 @@ Para uma melhor utilização do usuário existe a classe AcessibilityGetSensitiv
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = "Amigo, Faça o que você quiser com intuito de ajudar as pessoas. Só lembra de me mencionar no copyright"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -99,8 +99,7 @@ Para uma melhor utilização do usuário existe a classe AcessibilityGetSensitiv
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "AcessibilityFaceMouse", "AcessibilityFaceMouse/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "AcessibilityFaceMouse/**/*.{h,m,.swift}"
 
   # spec.public_header_files = "Classes/**/*.h"
 

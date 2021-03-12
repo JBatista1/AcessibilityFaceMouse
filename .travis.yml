@@ -1,6 +1,8 @@
 language: objective-c
 os: osx
-osx_image: xcode11.5
-xcode_project: AcessibilityFaceMouse/AcessibilityFaceMouse.xcodeproj
-xcode_scheme: AcessibilityFaceMouse
-xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+osx_image: xcode11.3
+
+script:
+- set -o pipefail
+- xcodebuild build -project AcessibilityFaceMouse/AcessibilityFaceMouse.xcodeproj -scheme "AcessibilityFaceMouse" -sdk iphonesimulator | xcpretty
+

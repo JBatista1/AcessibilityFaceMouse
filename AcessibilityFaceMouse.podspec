@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AcessibilityFaceMouse"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.3"
   spec.summary      = "Pega a movimentação da face do usuário e cria um cursor virtual no dispositivo. (Somente iphones X ou superior)"
 
   # This description is used to generate tags and improve search results.
@@ -99,7 +99,7 @@ Para uma melhor utilização do usuário existe a classe AcessibilityGetSensitiv
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "AcessibilityFaceMouse/**/*.{h,m,.swift}"
+  spec.source_files  = "AcessibilityFaceMouse/**/*.{h,m,.swift}", "AcessibilityFaceMouse"
 
   # spec.public_header_files = "Classes/**/*.h"
 

@@ -3,9 +3,4 @@ os: osx
 osx_image: xcode11.5
 xcode_project: AcessibilityFaceMouse/AcessibilityFaceMouse.xcodeproj
 xcode_scheme: AcessibilityFaceMouse
-xcode_destination: platform=iOS Simulator,OS=13.2.2,name=iPhone 8
-notifications:
-email:
-  recipients:
-    - j.batista.damasceno@icloud.com
-  on_failure: always # default: always
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X

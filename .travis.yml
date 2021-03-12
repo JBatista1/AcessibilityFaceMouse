@@ -1,15 +1,4 @@
-language: swift
-os: osx
-osx_image: xcode11.3
-script:  CODE_SIGNING_REQUIRED=NO
-notifications:
-email:
-  recipients:
-    - j.batista.damasceno@icloud.com
-  on_failure: always # default: always
-
-
-anguage: objective-c
+language: objective-c
 
 osx_image: xcode10.1
 env:

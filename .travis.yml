@@ -1,12 +1,12 @@
-language: objective-c
+language: swift
 os: osx
 osx_image: xcode11.3
-xcode_workspace: AcessibilityFaceMouse/AcessibilityFaceMouse.xcodeproj
-xcode_scheme: AcessibilityFaceMouse
-xcode_destination: platform=iOS Simulator,OS=13.2.2,name=iPhone 8
+script: xcodebuild clean build test -project AcessibilityFaceMouse/AcessibilityFaceMouse.xcodeproj -scheme "AcessibilityFaceMouse" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=13.2.2,name=iPhone 8" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
 notifications:
 email:
   recipients:
     - j.batista.damasceno@icloud.com
   on_failure: always # default: always
+
+
 

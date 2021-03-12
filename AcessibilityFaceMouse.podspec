@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AcessibilityFaceMouse"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "Pega a movimentação da face do usuário e cria um cursor virtual no dispositivo. (Somente iphones X ou superior)"
 
   # This description is used to generate tags and improve search results.
@@ -30,9 +30,7 @@ Pod::Spec.new do |spec|
     Temos quatro tipos de gestos: Piscar olho direito; piscar olho esquerdo; mostrar a língua ou com um comando de voz. Esse comando de voz pode receber quatro ações, a primeira é de toque em algo, segundo de voltar
     na navegação com navigationcontroller, o de próximo e de anterior, para usar em views que tem scroll, como celular e collectionsviews. Para demais ações, deve-se integrar componentes que possam facilitar na hora da utilização
     da aplicação.
-    A ação com voz ainda está em fase de testes. O mais recomendado é o da língua, pois tiveram os melhores resultados, diminuindo assim o esforço repetitivo.
-Para utilizar basta mudar a herança de uma classe que herda da viewcontroller  pela AccessibilityFaceAnchorViewController e iniciar os recursos necessarios. 
-Para uma melhor utilização do usuário existe a classe AcessibilityGetSensitivityViewController, que tem função de capturar as limitações da face do usuário e assim se adequando ao seu ritmo.
+    A ação com voz ainda está em fase de testes. O mais recomendado é o da língua, pois tiveram os melhores resultados, diminuindo assim o esforço repetitivo. Para utilizar basta mudar a herança de uma classe que herda da viewcontroller pela AccessibilityFaceAnchorViewController e iniciar os recursos necessarios.  Para uma melhor utilização do usuário existe a classe AcessibilityGetSensitivityViewController, que tem função de capturar as limitações da face do usuário e assim se adequando ao seu ritmo.
 
                    DESC
 
@@ -99,7 +97,7 @@ Para uma melhor utilização do usuário existe a classe AcessibilityGetSensitiv
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "AcessibilityFaceMouse/**/*.{h,m,.swift}", "AcessibilityFaceMouse", "Exemples/**/*.{h,m,.swift}"
+  spec.source_files  = "AcessibilityFaceMouse/**/*.{h,m,.swift}", "AcessibilityFaceMouse"
 
   # spec.public_header_files = "Classes/**/*.h"
 
